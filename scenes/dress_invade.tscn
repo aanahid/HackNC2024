@@ -1,0 +1,166 @@
+[gd_scene load_steps=8 format=3 uid="uid://ll8nkawifktc"]
+
+[ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_n256q"]
+[ext_resource type="Texture2D" uid="uid://c0ce84dvquh0d" path="res://assets/pinkhair_noface.png" id="1_vkug7"]
+[ext_resource type="Script" path="res://scripts/dress_invade.gd" id="1_w6f6x"]
+[ext_resource type="StyleBox" uid="uid://quyqrk008ui5" path="res://assets/styleboxflat/pink_tab.tres" id="3_brpsm"]
+[ext_resource type="StyleBox" uid="uid://vdx68ewbma62" path="res://assets/styleboxflat/light_tab.tres" id="4_qrwmr"]
+[ext_resource type="StyleBox" uid="uid://c3j36i7xsogvg" path="res://assets/styleboxflat/dark_tab.tres" id="5_0bsix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eeng"]
+bg_color = Color(0.956863, 0.905882, 0.835294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="DressInvade" type="Node2D"]
+script = ExtResource("1_w6f6x")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1296.0
+offset_bottom = 736.0
+color = Color(0.956863, 0.905882, 0.835294, 1)
+metadata/_edit_lock_ = true
+
+[node name="Items" type="Panel" parent="."]
+offset_left = 628.0
+offset_top = 80.0
+offset_right = 1103.0
+offset_bottom = 541.0
+theme_override_styles/panel = ExtResource("1_n256q")
+
+[node name="clothes" type="Panel" parent="Items"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 39.0
+offset_top = -63.0
+offset_right = 145.0
+offset_bottom = 3.0
+theme_override_styles/panel = ExtResource("3_brpsm")
+
+[node name="clothes_button" type="Button" parent="Items/clothes"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 100.0
+offset_bottom = 58.0
+
+[node name="faces" type="Panel" parent="Items"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 151.0
+offset_top = -63.0
+offset_right = 257.0
+offset_bottom = 3.0
+theme_override_styles/panel = ExtResource("4_qrwmr")
+
+[node name="faces_button" type="Button" parent="Items/faces"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 100.0
+offset_bottom = 58.0
+
+[node name="face_items" type="CanvasLayer" parent="Items/faces"]
+visible = false
+
+[node name="faces_control" type="Control" parent="Items/faces/face_items"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 624.0
+offset_top = 112.0
+offset_right = 1098.0
+offset_bottom = 501.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Items/faces/face_items/faces_control"]
+offset_left = 28.0
+offset_top = -11.0
+offset_right = 467.0
+offset_bottom = 415.0
+
+[node name="face_grid" type="GridContainer" parent="Items/faces/face_items/faces_control/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="whitebox" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox2" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox3" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox4" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox5" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox6" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox7" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox8" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox9" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="whitebox10" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="extra" type="Panel" parent="Items"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 263.0
+offset_top = -63.0
+offset_right = 369.0
+offset_bottom = 3.0
+theme_override_styles/panel = ExtResource("5_0bsix")
+
+[node name="extra_button" type="Button" parent="Items/extra"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 100.0
+offset_bottom = 58.0
+
+[node name="body" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("1_vkug7")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="pressed" from="Items/clothes/clothes_button" to="." method="_on_clothes_button_pressed"]
+[connection signal="pressed" from="Items/faces/faces_button" to="." method="_on_faces_button_pressed"]
+[connection signal="pressed" from="Items/extra/extra_button" to="." method="_on_extra_button_pressed"]
