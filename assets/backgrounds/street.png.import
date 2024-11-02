@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://berfma7vgk82"
-path="res://.godot/imported/antennas2.png-6f7a12b5cc27b1bd4b772060b8224f22.ctex"
+uid="uid://d07svgaqtpn04"
+path="res://.godot/imported/street.png-db19872478bc4b61e56f8780789aaaf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dressup/antennas2.png"
-dest_files=["res://.godot/imported/antennas2.png-6f7a12b5cc27b1bd4b772060b8224f22.ctex"]
+source_file="res://assets/backgrounds/street.png"
+dest_files=["res://.godot/imported/street.png-db19872478bc4b61e56f8780789aaaf7.ctex"]
 
 [params]
 

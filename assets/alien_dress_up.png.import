@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0hj2bncwtn4"
-path="res://.godot/imported/eyes.png-6af4bf5d1369fa16d8f28313df7eee2d.ctex"
+uid="uid://c5ipe6n2dvufj"
+path="res://.godot/imported/alien_dress_up.png-5fcd60eeb1e33a775faa571fbc3a2c9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dressup/eyes.png"
-dest_files=["res://.godot/imported/eyes.png-6af4bf5d1369fa16d8f28313df7eee2d.ctex"]
+source_file="res://assets/alien_dress_up.png"
+dest_files=["res://.godot/imported/alien_dress_up.png-5fcd60eeb1e33a775faa571fbc3a2c9c.ctex"]
 
 [params]
 

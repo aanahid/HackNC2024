@@ -6,9 +6,9 @@
 [ext_resource type="StyleBox" uid="uid://quyqrk008ui5" path="res://assets/styleboxflat/pink_tab.tres" id="3_brpsm"]
 [ext_resource type="StyleBox" uid="uid://vdx68ewbma62" path="res://assets/styleboxflat/light_tab.tres" id="4_qrwmr"]
 [ext_resource type="StyleBox" uid="uid://c3j36i7xsogvg" path="res://assets/styleboxflat/dark_tab.tres" id="5_0bsix"]
-[ext_resource type="Texture2D" uid="uid://cs0hj2bncwtn4" path="res://assets/Dressup/eyes.png" id="7_c86hr"]
-[ext_resource type="Texture2D" uid="uid://d12rm1d7clkmx" path="res://assets/Dressup/eyes2.png" id="8_xe8pn"]
-[ext_resource type="Texture2D" uid="uid://berfma7vgk82" path="res://assets/Dressup/antennas2.png" id="9_bu5qv"]
+[ext_resource type="Texture2D" uid="uid://cs0hj2bncwtn4" path="res://assets/Dressup/eyes/eyes.png" id="7_c86hr"]
+[ext_resource type="Texture2D" uid="uid://d12rm1d7clkmx" path="res://assets/Dressup/eyes/eyes2.png" id="8_xe8pn"]
+[ext_resource type="Texture2D" uid="uid://berfma7vgk82" path="res://assets/Dressup/extra/antennas2.png" id="9_bu5qv"]
 [ext_resource type="Texture2D" uid="uid://xplck5c4rxgs" path="res://assets/Dressup/bunnyslippers.png" id="10_4a6rt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eeng"]
@@ -63,6 +63,7 @@ offset_right = 1098.0
 offset_bottom = 519.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Items/clothes/clothes_items/clothes_control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = -16.0
 offset_right = 463.0
@@ -131,6 +132,7 @@ offset_right = 1098.0
 offset_bottom = 501.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Items/faces/face_items/faces_control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = -16.0
 offset_right = 462.0
@@ -150,6 +152,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="eyes" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox"]
 clip_contents = true
+layout_mode = 0
 offset_left = -297.0
 offset_top = -59.0
 offset_right = 423.0
@@ -166,6 +169,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="eyes2" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox2"]
 clip_contents = true
+layout_mode = 0
 offset_left = -297.0
 offset_top = -59.0
 offset_right = 423.0
@@ -236,6 +240,7 @@ offset_right = 1098.0
 offset_bottom = 519.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Items/extra/extra_items/extra_control"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = -16.0
 offset_right = 463.0
