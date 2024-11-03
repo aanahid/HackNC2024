@@ -19,6 +19,12 @@ func _ready():
 	Global.currentBangs = $pinkfront
 	Global.currentHair = $pinkback
 	Global.currentAntenna = $antennas2
+	Global.currentBottom = null
+	Global.currentBottom = null
+	Global.currentGlasses = null
+	Global.ear = 0
+	Global.tail = 0
+	Global.star = 0
 	
 	currs = $bunnyslippers
 	currf = $eyes2
@@ -413,3 +419,9 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 	else:
 		$AudioStreamPlayer.stop()
 		print("Music OFF")
+
+func _on_settings_toggled(toggled_on: bool) -> void:
+	if toggled_on: 
+		$settings/Panel.show()
+	else: 
+		$settings/Panel.hide()

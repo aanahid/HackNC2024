@@ -1353,8 +1353,9 @@ layout_mode = 2
 custom_minimum_size = Vector2(440, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("39_oh70p")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 text = "You must dress to invade!"
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Next" type="Panel" parent="."]
@@ -1493,4 +1494,5 @@ parameters/looping = false
 [connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox7/e7" to="." method="_on_e_7_pressed"]
 [connection signal="pressed" from="Items/extra/extra_button" to="." method="_on_extra_button_pressed"]
 [connection signal="pressed" from="Next/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="toggled" from="settings" to="." method="_on_settings_toggled"]
 [connection signal="toggled" from="settings/Panel/Music/CheckButton" to="." method="_on_check_button_toggled"]
