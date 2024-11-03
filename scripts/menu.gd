@@ -15,11 +15,11 @@ func _on_exit_pressed() -> void:
 	get_tree().quit()
 
 
-func _on_yellow_pressed() -> void:
-	$background.color = Color("ebdca1")
-
-func _on_purple_pressed() -> void:
-	$background.color = Color("5d2f4a")
+#func _on_yellow_pressed() -> void:
+	#$background.color = Color("ebdca1")
+#
+#func _on_purple_pressed() -> void:
+	#$background.color = Color("5d2f4a")
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	Global.toggle_music()
