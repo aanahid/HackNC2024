@@ -1,8 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4kdp8ewf8c25"]
+[gd_scene load_steps=34 format=3 uid="uid://b4kdp8ewf8c25"]
 
 [ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="1_30xqh"]
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="2_7dn3j"]
+[ext_resource type="Script" path="res://scripts/cutscene.gd" id="3_26x5t"]
 [ext_resource type="FontFile" uid="uid://ydi4j86nisvg" path="res://assets/Dressup/ZenDots-Regular.ttf" id="3_ham1a"]
+[ext_resource type="Texture2D" uid="uid://chueurcgesjs0" path="res://assets/Dressup/extra/tail.png" id="5_b1uow"]
+[ext_resource type="Texture2D" uid="uid://wb8ex4j835hb" path="res://assets/Dressup/hair/blueback.png" id="6_v28ic"]
+[ext_resource type="Texture2D" uid="uid://oobrbx0ypwua" path="res://assets/Dressup/hair/pinkback.png" id="7_q36ml"]
+[ext_resource type="Texture2D" uid="uid://cphwp82baiq71" path="res://assets/Dressup/hair/purpleback.png" id="8_ijtbi"]
+[ext_resource type="Texture2D" uid="uid://c5ipe6n2dvufj" path="res://assets/alien_dress_up.png" id="9_nicc0"]
+[ext_resource type="Texture2D" uid="uid://drlyboc2hdj4l" path="res://assets/Dressup/hair/bluefront.png" id="10_vcal8"]
+[ext_resource type="Texture2D" uid="uid://b6edohdfexe0s" path="res://assets/Dressup/hair/pinkfront.png" id="11_cqthj"]
+[ext_resource type="Texture2D" uid="uid://w7nxt1d3qifx" path="res://assets/Dressup/hair/purplefront.png" id="12_11eim"]
+[ext_resource type="Texture2D" uid="uid://cha5hmoui37kg" path="res://assets/Dressup/extra/ear.png" id="13_d75qe"]
+[ext_resource type="Texture2D" uid="uid://cs0hj2bncwtn4" path="res://assets/Dressup/eyes/eyes.png" id="14_fdpf4"]
+[ext_resource type="Texture2D" uid="uid://d12rm1d7clkmx" path="res://assets/Dressup/eyes/eyes2.png" id="15_24ic0"]
+[ext_resource type="Texture2D" uid="uid://c4sxp7ay2gnsm" path="res://assets/Dressup/eyes/bigeyes.png" id="16_0pwun"]
+[ext_resource type="Texture2D" uid="uid://berfma7vgk82" path="res://assets/Dressup/extra/antennas2.png" id="17_7ovdk"]
+[ext_resource type="Texture2D" uid="uid://cwuhst1nr4lle" path="res://assets/Dressup/extra/singleantenna.png" id="18_tlqe6"]
+[ext_resource type="Texture2D" uid="uid://doth6k3s34fh6" path="res://assets/Dressup/bottoms/blackpants.png" id="19_3iyhu"]
+[ext_resource type="Texture2D" uid="uid://bpdcbcc4u6sy0" path="res://assets/Dressup/bottoms/blackshorts.png" id="20_a6k2j"]
+[ext_resource type="Texture2D" uid="uid://egvjmvhcj2pn" path="res://assets/Dressup/bottoms/bluesuitpant.png" id="21_nayea"]
+[ext_resource type="Texture2D" uid="uid://ccv4fjyaxmori" path="res://assets/Dressup/bottoms/greyskirt.png" id="22_bl21y"]
+[ext_resource type="Texture2D" uid="uid://dday8jg3fmgp1" path="res://assets/Dressup/bottoms/longskirt.png" id="23_bvcfw"]
+[ext_resource type="Texture2D" uid="uid://dtruv1jtce1f5" path="res://assets/Dressup/shoes/bunnyslippers.png" id="24_d0dca"]
+[ext_resource type="Texture2D" uid="uid://w30m4cnbey0r" path="res://assets/Dressup/shoes/blackshoes.png" id="25_n7uny"]
+[ext_resource type="Texture2D" uid="uid://b2m4s8mnenebx" path="res://assets/Dressup/shoes/boots.png" id="26_1bhqb"]
+[ext_resource type="Texture2D" uid="uid://1licrjgue202" path="res://assets/Dressup/shoes/grayshoes.png" id="27_3h10l"]
+[ext_resource type="Texture2D" uid="uid://cf6l8ywa0teqk" path="res://assets/Dressup/shoes/blueshoes.png" id="28_vs2iy"]
+[ext_resource type="Texture2D" uid="uid://ccc4djhce0bhv" path="res://assets/Dressup/tops/greytop.png" id="29_gmtuv"]
+[ext_resource type="Texture2D" uid="uid://bo51sqybckn2p" path="res://assets/Dressup/tops/jersey.png" id="30_wooqr"]
+[ext_resource type="Texture2D" uid="uid://7aebpifna2fi" path="res://assets/Dressup/tops/needspace.png" id="31_77xa5"]
+[ext_resource type="Texture2D" uid="uid://botrfavffp47b" path="res://assets/Dressup/tops/spacesuit.png" id="32_jidlk"]
+[ext_resource type="Texture2D" uid="uid://couvs6v83e2bq" path="res://assets/Dressup/tops/suittop.png" id="33_7pqww"]
 
 [node name="Cutscene" type="Node2D"]
 
@@ -18,19 +48,21 @@ metadata/_edit_lock_ = true
 
 [node name="TextRect" type="Panel" parent="."]
 offset_left = 630.0
-offset_top = 563.0
+offset_top = 211.0
 offset_right = 1105.0
 offset_bottom = 698.0
 theme_override_styles/panel = ExtResource("2_7dn3j")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextRect"]
 layout_mode = 0
+offset_top = 7.0
 offset_right = 480.0
-offset_bottom = 135.0
+offset_bottom = 477.0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
+script = ExtResource("3_26x5t")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextRect/MarginContainer"]
 layout_mode = 2
@@ -42,3 +74,287 @@ theme_override_fonts/font = ExtResource("3_ham1a")
 theme_override_font_sizes/font_size = 25
 text = "This is placeholder This is placeholder"
 autowrap_mode = 2
+
+[node name="tail" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("5_b1uow")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="blueback" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("6_v28ic")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="pinkback" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("7_q36ml")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="purpleback" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("8_ijtbi")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="body" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("9_nicc0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bluefront" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("10_vcal8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="pinkfront" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("11_cqthj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="purplefront" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("12_11eim")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ear" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("13_d75qe")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="eyes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("14_fdpf4")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="eyes2" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("15_24ic0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bigeyes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("16_0pwun")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="antennas2" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("17_7ovdk")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="singleant" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("18_tlqe6")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="blackpants" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("19_3iyhu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="blackshorts" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("20_a6k2j")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bluesuitpants" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("21_nayea")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="greyskirt" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("22_bl21y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="longskirt" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("23_bvcfw")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bunnyslippers" type="TextureRect" parent="."]
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("24_d0dca")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="blackshoes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 542.0
+offset_bottom = 706.0
+texture = ExtResource("25_n7uny")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="boots" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 542.0
+offset_bottom = 706.0
+texture = ExtResource("26_1bhqb")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="grayshoes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 542.0
+offset_bottom = 706.0
+texture = ExtResource("27_3h10l")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="blueshoes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 542.0
+offset_bottom = 706.0
+texture = ExtResource("28_vs2iy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="greytop" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("29_gmtuv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="jersey" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("30_wooqr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="needspace" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("31_77xa5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="spacesuit" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("32_jidlk")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="suittop" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("33_7pqww")
+expand_mode = 1
+stretch_mode = 4
