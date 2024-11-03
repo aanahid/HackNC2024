@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ll8nkawifktc"]
+[gd_scene load_steps=50 format=3 uid="uid://ll8nkawifktc"]
 
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_n256q"]
 [ext_resource type="Script" path="res://scripts/dress_invade.gd" id="1_w6f6x"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ccv4fjyaxmori" path="res://assets/Dressup/bottoms/greyskirt.png" id="9_818r4"]
 [ext_resource type="Texture2D" uid="uid://berfma7vgk82" path="res://assets/Dressup/extra/antennas2.png" id="9_bu5qv"]
 [ext_resource type="Texture2D" uid="uid://b6edohdfexe0s" path="res://assets/Dressup/hair/pinkfront.png" id="9_owo4e"]
-[ext_resource type="Texture2D" uid="uid://dtruv1jtce1f5" path="res://assets/Dressup/shoes/bunnyslippers.png" id="10_4a6rt"]
+[ext_resource type="Texture2D" uid="uid://xplck5c4rxgs" path="res://assets/Dressup/bunnyslippers.png" id="10_4a6rt"]
 [ext_resource type="Texture2D" uid="uid://dday8jg3fmgp1" path="res://assets/Dressup/bottoms/longskirt.png" id="10_n66uc"]
 [ext_resource type="Texture2D" uid="uid://w7nxt1d3qifx" path="res://assets/Dressup/hair/purplefront.png" id="10_ne8he"]
 [ext_resource type="Texture2D" uid="uid://bpdcbcc4u6sy0" path="res://assets/Dressup/bottoms/blackshorts.png" id="11_e12ri"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://oobrbx0ypwua" path="res://assets/Dressup/hair/pinkback.png" id="12_pmigu"]
 [ext_resource type="Texture2D" uid="uid://doth6k3s34fh6" path="res://assets/Dressup/bottoms/blackpants.png" id="13_lolhd"]
 [ext_resource type="Texture2D" uid="uid://cphwp82baiq71" path="res://assets/Dressup/hair/purpleback.png" id="13_og5lb"]
+[ext_resource type="Texture2D" uid="uid://dtruv1jtce1f5" path="res://assets/Dressup/shoes/bunnyslippers.png" id="14_13f84"]
 [ext_resource type="Texture2D" uid="uid://1licrjgue202" path="res://assets/Dressup/shoes/grayshoes.png" id="15_34psp"]
 [ext_resource type="Texture2D" uid="uid://c5ipe6n2dvufj" path="res://assets/alien_dress_up.png" id="15_lbppi"]
 [ext_resource type="Texture2D" uid="uid://b2m4s8mnenebx" path="res://assets/Dressup/shoes/boots.png" id="16_b2w4g"]
@@ -37,7 +38,13 @@
 [ext_resource type="Texture2D" uid="uid://cha5hmoui37kg" path="res://assets/Dressup/extra/ear.png" id="32_iy60b"]
 [ext_resource type="Texture2D" uid="uid://chueurcgesjs0" path="res://assets/Dressup/extra/tail.png" id="33_ewe55"]
 [ext_resource type="Texture2D" uid="uid://bfk6j6p0c7ihw" path="res://assets/icons/antennas.png" id="36_lb25g"]
+[ext_resource type="Texture2D" uid="uid://u277sev0bb25" path="res://assets/Dressup/extra/glasses.png" id="37_chbcf"]
+[ext_resource type="Texture2D" uid="uid://v757ancyigjy" path="res://assets/Dressup/extra/sunglasses.png" id="38_04g5d"]
 [ext_resource type="FontFile" uid="uid://ydi4j86nisvg" path="res://assets/Dressup/ZenDots-Regular.ttf" id="39_oh70p"]
+[ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="39_t1d1k"]
+[ext_resource type="Texture2D" uid="uid://pik4wjjqtntc" path="res://assets/icons/settings.png" id="43_1pvmd"]
+[ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="44_b2vq0"]
+[ext_resource type="AudioStream" uid="uid://xm5jwpf16cap" path="res://assets/spaceybg.mp3" id="45_8dyiv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eeng"]
 bg_color = Color(0.956863, 0.905882, 0.835294, 1)
@@ -52,6 +59,11 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hv08m"]
+bg_color = Color(0.576471, 0.121569, 0.294118, 0.741176)
+
+[sub_resource type="Theme" id="Theme_a2w1s"]
 
 [node name="DressInvade" type="Node2D"]
 script = ExtResource("1_w6f6x")
@@ -105,6 +117,7 @@ offset_right = 100.0
 offset_bottom = 59.0
 
 [node name="clothes_items" type="CanvasLayer" parent="Items/clothes"]
+visible = false
 
 [node name="clothes_control" type="Control" parent="Items/clothes/clothes_items"]
 layout_mode = 3
@@ -392,7 +405,7 @@ offset_top = -302.0
 offset_right = 280.0
 offset_bottom = 91.0
 mouse_filter = 2
-texture = ExtResource("10_4a6rt")
+texture = ExtResource("14_13f84")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
@@ -797,7 +810,6 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="extra_items" type="CanvasLayer" parent="Items/extra"]
-visible = false
 
 [node name="extra_control" type="Control" parent="Items/extra/extra_items"]
 layout_mode = 3
@@ -916,6 +928,81 @@ stretch_mode = 5
 metadata/_edit_lock_ = true
 
 [node name="e4" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox4"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
+
+[node name="whitebox5" type="Panel" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="glasses" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox5"]
+clip_contents = true
+layout_mode = 0
+offset_left = -487.0
+offset_top = -114.0
+offset_right = 600.0
+offset_bottom = 854.0
+mouse_filter = 2
+texture = ExtResource("37_chbcf")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="e5" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox5"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
+
+[node name="whitebox6" type="Panel" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="sunglasses" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox6"]
+clip_contents = true
+layout_mode = 0
+offset_left = -435.0
+offset_top = -95.0
+offset_right = 546.0
+offset_bottom = 770.0
+mouse_filter = 2
+texture = ExtResource("38_04g5d")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="e6" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox6"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
+
+[node name="whitebox7" type="Panel" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
+
+[node name="star" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox7"]
+clip_contents = true
+layout_mode = 0
+offset_left = -412.0
+offset_top = -72.0
+offset_right = 703.0
+offset_bottom = 928.0
+mouse_filter = 2
+texture = ExtResource("39_t1d1k")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="e7" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox7"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
@@ -1213,6 +1300,36 @@ texture = ExtResource("8_lvfqw")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="glasses" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("37_chbcf")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="sunglasses" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("37_chbcf")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="star" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("39_t1d1k")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="Theme" type="Panel" parent="."]
 offset_left = 630.0
 offset_top = 563.0
@@ -1264,6 +1381,82 @@ theme_override_fonts/font = ExtResource("39_oh70p")
 theme_override_font_sizes/font_size = 25
 text = "Done"
 
+[node name="settings" type="TextureButton" parent="."]
+offset_left = 120.0
+offset_top = 32.0
+offset_right = 168.0
+offset_bottom = 88.0
+
+[node name="setting_icon" type="TextureRect" parent="settings"]
+layout_mode = 0
+offset_left = -112.0
+offset_top = -24.0
+offset_right = -54.0
+offset_bottom = 42.0
+texture = ExtResource("43_1pvmd")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="settings"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 272.0
+offset_bottom = 408.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hv08m")
+
+[node name="background color" type="Label" parent="settings/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 256.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("44_b2vq0")
+theme_override_font_sizes/font_size = 20
+text = "Background Color: "
+
+[node name="ColorRect" type="ColorRect" parent="settings/Panel/background color"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 104.0
+offset_bottom = 64.0
+theme = SubResource("Theme_a2w1s")
+color = Color(0.921569, 0.862745, 0.631373, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="settings/Panel/background color"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 40.0
+offset_right = 168.0
+offset_bottom = 64.0
+color = Color(0.364706, 0.184314, 0.290196, 1)
+
+[node name="Music" type="Label" parent="settings/Panel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 144.0
+offset_right = 200.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("44_b2vq0")
+theme_override_font_sizes/font_size = 20
+text = "Music:
+"
+
+[node name="CheckButton" type="CheckButton" parent="settings/Panel/Music"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 52.0
+offset_bottom = 64.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("44_b2vq0")
+button_pressed = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_8dyiv")
+parameters/looping = false
+
 [connection signal="pressed" from="Items/clothes/clothes_button" to="." method="_on_clothes_button_pressed"]
 [connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox/c1" to="." method="_on_please_pressed"]
 [connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox2/c2" to="." method="_on_c2_pressed"]
@@ -1294,5 +1487,9 @@ text = "Done"
 [connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox2/e2" to="." method="_on_e_2_pressed"]
 [connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox3/e3" to="." method="_on_e_3_pressed"]
 [connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox4/e4" to="." method="_on_e_4_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox5/e5" to="." method="_on_e_5_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox6/e6" to="." method="_on_e_6_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox7/e7" to="." method="_on_e_7_pressed"]
 [connection signal="pressed" from="Items/extra/extra_button" to="." method="_on_extra_button_pressed"]
 [connection signal="pressed" from="Next/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="toggled" from="settings/Panel/Music/CheckButton" to="." method="_on_check_button_toggled"]

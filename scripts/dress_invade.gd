@@ -61,51 +61,51 @@ func _on_extra_button_pressed() -> void:
 func _on_please_pressed() -> void:
 	print("clicked")
 	if Global.currentTop != null: 
-		Global.currentTop.hide()
-	if Global.currentTop == $greytop: 
+		$greytop.hide()
+	if Global.currentTop == 1: 
 		Global.currentTop = null;
 	else: 
-		Global.currentTop = $greytop
+		Global.currentTop = 1
 		$greytop.show()
 
 func _on_c2_pressed() -> void:
 	if Global.currentTop != null: 
-		Global.currentTop.hide()
-	if Global.currentTop == $jersey: 
+		$jersey.hide()
+	if Global.currentTop == 2: 
 		$jersey.hide()
 		Global.currentTop = null;
 	else: 
-		Global.currentTop = $jersey
+		Global.currentTop = 2
 		$jersey.show()
 
 func _on_c_3_pressed() -> void:
 	if Global.currentTop != null: 
-		Global.currentTop.hide()
-	if Global.currentTop == $needspace: 
+		$needspace.hide()
+	if Global.currentTop == 3: 
 		$needspace.hide()
 		Global.currentTop = null;
 	else: 
-		Global.currentTop = $needspace
+		Global.currentTop = 3
 		$needspace.show()
 
 func _on_c_4_pressed() -> void:
 	if Global.currentTop != null: 
-		Global.currentTop.hide()
-	if Global.currentTop == $spacesuit: 
+		$spacesuit.hide()
+	if Global.currentTop == 4: 
 		$spacesuit.hide()
 		Global.currentTop = null;
 	else: 
-		Global.currentTop = $spacesuit
+		Global.currentTop = 4
 		$spacesuit.show()
 
 func _on_c_5_pressed() -> void:
 	if Global.currentTop != null: 
-		Global.currentTop.hide()
-	if Global.currentTop == $suittop: 
+		$suittop.hide()
+	if Global.currentTop == 5: 
 		$suittop.hide()
 		Global.currentTop = null;
 	else: 
-		Global.currentTop = $suittop
+		Global.currentTop = 5
 		$suittop.show()
 
 func _on_c_6_pressed() -> void:
@@ -298,7 +298,6 @@ func _on_f_9_pressed() -> void:
 		Global.currentHair = $purpleback
 		$purpleback.show()
 
-
 func _on_e_1_pressed() -> void:
 	if Global.currentAntenna != null: 
 		Global.currentAntenna.hide()
@@ -321,9 +320,40 @@ func _on_e_2_pressed() -> void:
 
 func _on_e_3_pressed() -> void:
 	$ear.visible = !$ear.visible
-
+	
 func _on_e_4_pressed() -> void:
 	$tail.visible = !$tail.visible
 
 func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
+
+func _on_e_5_pressed() -> void:
+	if Global.currentGlasses != null: 
+		Global.currentGlasses.hide()
+	if Global.currentGlasses == $glasses: 
+		$glasses.hide()
+		Global.currentGlasses = null;
+	else:
+		Global.currentGlasses = $glasses
+		$glasses.show()
+
+func _on_e_6_pressed() -> void:
+	if Global.currentGlasses != null: 
+		Global.currentGlasses.hide()
+	if Global.currentGlasses == $sunglasses: 
+		$sunglasses.hide()
+		Global.currentGlasses = null;
+	else:
+		Global.currentGlasses = $sunglasses
+		$sunglasses.show()
+
+func _on_e_7_pressed() -> void:
+	$star.visible = !$star.visible
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		$AudioStreamPlayer.play() 
+		print("Music ON")
+	else:
+		$AudioStreamPlayer.stop()
+		print("Music OFF")

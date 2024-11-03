@@ -7,5 +7,6 @@ extends Node
 @onready var currentBottom = null
 @onready var currentShoes = null
 @onready var currentAntenna = null
+@onready var currentGlasses = null
 
 @onready var round = 1
