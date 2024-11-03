@@ -6,19 +6,25 @@ extends Node2D
 
 var currt = null
 var currb = null
+var currg = null
 var currs = null
 var currf = null
 var currbangs = null
 var currh = null
-var currg = null
 var curra = null
-
+	
 func _ready():
 	Global.currentFace = $eyes2
 	Global.currentShoes = $bunnyslippers
 	Global.currentBangs = $pinkfront
 	Global.currentHair = $pinkback
 	Global.currentAntenna = $antennas2
+	
+	currs = $bunnyslippers
+	currf = $eyes2
+	currbangs = $pinkfront
+	currh = $pinkback
+	curra = $antennas2
 	
 	if Global.round == 1: 
 		$Theme/theme1/HBoxContainer/Label.text = "You must dress to invade!"
@@ -360,7 +366,6 @@ func _on_e_3_pressed() -> void:
 	else: 
 		Global.ear = 1
 	$ear.visible = !$ear.visible
-	
 	
 func _on_e_4_pressed() -> void:
 	if Global.tail: 
