@@ -6,6 +6,7 @@
 
 [node name="Menu" type="Control"]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 227.0
@@ -13,21 +14,6 @@ offset_bottom = 176.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_66qgj")
-
-[node name="Play" type="TextureButton" parent="."]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-offset_left = 377.0
-offset_top = 153.0
-offset_right = 439.0
-offset_bottom = 183.0
-
-[node name="play_button" type="TextureRect" parent="Play"]
-layout_mode = 0
-offset_left = 434.0
-offset_top = 277.0
-offset_right = 592.0
-offset_bottom = 325.0
 
 [node name="background" type="TextureRect" parent="."]
 modulate = Color(0.366595, 0.366595, 0.366595, 1)
@@ -50,5 +36,22 @@ texture = ExtResource("3_cjwtd")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="Play" type="TextureButton" parent="."]
+top_level = true
+z_index = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_left = 808.0
+offset_top = 429.0
+offset_right = 973.0
+offset_bottom = 479.0
+
+[node name="play_button" type="TextureRect" parent="Play"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 165.0
+offset_bottom = 52.0
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

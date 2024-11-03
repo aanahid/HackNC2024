@@ -4,6 +4,14 @@ extends Node2D
 @onready var faces_items = $Items/faces/face_items
 @onready var extra_items = $Items/extra/extra_items
 
+@onready var currentFace = $eyes2
+@onready var currentBangs = null
+@onready var currentHair = null
+@onready var currentTop = null
+@onready var currentBottom = null
+@onready var currentShoes = $bunnyslippers
+@onready var currentAntenna = null
+
 func _on_clothes_button_pressed():
 	var clothes_box = $Items/clothes.get_theme_stylebox("panel")
 	var faces_box = $Items/faces.get_theme_stylebox("panel")
@@ -42,3 +50,33 @@ func _on_extra_button_pressed() -> void:
 	clothes_items.hide()
 	faces_items.hide()
 	extra_items.show()
+
+
+#func _on_c_1_pressed() -> void:
+	#print("click")
+	#if currentTop != null:
+		#currentTop.hide()
+		#
+	#currentTop = $greytop
+	#print("put on grey top")
+	#currentTop.show()
+
+
+func _on_c_2_pressed() -> void:
+	print("click")
+	if currentTop != null:
+		currentTop.hide()
+	
+	currentTop = $jersey
+	print("put on jersey")
+	currentTop.show()
+
+
+func _on_cwhitebox_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
+		if currentTop != null:
+			currentTop.hide()
+		
+	currentTop = $greytop
+	print("put on grey top")
+	currentTop.show()
