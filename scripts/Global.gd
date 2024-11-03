@@ -13,3 +13,22 @@ extends Node
 @onready var star = 0
 
 @onready var round = 1
+
+var music_on = true  # This keeps track of whether music is on or off.
+@onready var music = preload("res://assets/spaceybg.mp3")  # Load your music file
+
+var audio_stream = null  # For the music audio stream
+
+func start_music():
+	if audio_stream == null:
+		audio_stream = AudioStreamPlayer.new()
+		audio_stream.stream = music
+		add_child(audio_stream)
+		audio_stream.play()
+		
+func toggle_music():
+	music_on = !music_on  # Toggle the boolean state
+	if music_on:
+		audio_stream.play()
+	else:
+		audio_stream.stop()

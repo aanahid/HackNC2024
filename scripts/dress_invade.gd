@@ -413,15 +413,14 @@ func _on_e_7_pressed() -> void:
 	$star.visible = !$star.visible
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		$AudioStreamPlayer.play() 
-		print("Music ON")
-	else:
-		$AudioStreamPlayer.stop()
-		print("Music OFF")
+	Global.toggle_music()
 
-func _on_settings_toggled(toggled_on: bool) -> void:
-	if toggled_on: 
-		$settings/Panel.show()
-	else: 
-		$settings/Panel.hide()
+func _on_settings_pressed() -> void:
+	$settings/Panel.visible = !$settings/Panel.visible
+
+
+func _on_yellow_pressed() -> void:
+	$background.color = Color("ebdca1")
+
+func _on_purple_pressed() -> void:
+	$background.color = Color("5d2f4a")
