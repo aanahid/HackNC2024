@@ -117,7 +117,6 @@ offset_right = 100.0
 offset_bottom = 59.0
 
 [node name="clothes_items" type="CanvasLayer" parent="Items/clothes"]
-visible = false
 
 [node name="clothes_control" type="Control" parent="Items/clothes/clothes_items"]
 layout_mode = 3
@@ -810,6 +809,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="extra_items" type="CanvasLayer" parent="Items/extra"]
+visible = false
 
 [node name="extra_control" type="Control" parent="Items/extra/extra_items"]
 layout_mode = 3
@@ -1151,6 +1151,16 @@ texture = ExtResource("31_icylq")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="grayshoes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 542.0
+offset_bottom = 706.0
+texture = ExtResource("15_34psp")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="blackpants" type="TextureRect" parent="."]
 visible = false
 offset_left = 56.0
@@ -1227,16 +1237,6 @@ offset_top = 56.0
 offset_right = 542.0
 offset_bottom = 706.0
 texture = ExtResource("16_b2w4g")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="grayshoes" type="TextureRect" parent="."]
-visible = false
-offset_left = 56.0
-offset_top = 56.0
-offset_right = 542.0
-offset_bottom = 706.0
-texture = ExtResource("15_34psp")
 expand_mode = 1
 stretch_mode = 4
 
@@ -1398,6 +1398,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Panel" type="Panel" parent="settings"]
+visible = false
 layout_mode = 0
 offset_top = 32.0
 offset_right = 272.0

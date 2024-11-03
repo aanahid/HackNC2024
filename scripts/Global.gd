@@ -8,5 +8,8 @@ extends Node
 @onready var currentShoes = null
 @onready var currentAntenna = null
 @onready var currentGlasses = null
+@onready var ears = 0
+@onready var tail = 0
+@onready var star = 0
 
 @onready var round = 1
