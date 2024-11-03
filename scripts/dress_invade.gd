@@ -14,15 +14,15 @@ var currh = null
 var curra = null
 	
 func _ready():
-	Global.currentFace = $eyes2
-	Global.currentShoes = $bunnyslippers
-	Global.currentBangs = $pinkfront
-	Global.currentHair = $pinkback
-	Global.currentAntenna = $antennas2
+	Global.currentFace = 2
+	Global.currentShoes = 1
+	Global.currentBangs = 2
+	Global.currentHair = 2
+	Global.currentAntenna = 1
 	Global.currentBottom = null
-	Global.currentBottom = null
+	Global.currentTop = null
 	Global.currentGlasses = null
-	Global.ear = 0
+	Global.ears = 0
 	Global.tail = 0
 	Global.star = 0
 	
@@ -217,10 +217,10 @@ func _on_c_13_pressed() -> void:
 		currs.hide()
 	if Global.currentShoes == 3: 
 		$boots.hide()
-		currs = $boots
 		Global.currentShoes = null;
 	else:
 		Global.currentShoes = 3
+		currs = $boots
 		$boots.show()
 
 func _on_c_14_pressed() -> void:
@@ -258,7 +258,7 @@ func _on_f_1_pressed() -> void:
 
 func _on_f_2_pressed() -> void:
 	if Global.currentFace != null: 
-		$eyes2.hide()
+		currf.hide()
 	if Global.currentFace == 2: 
 		$eyes2.hide()
 		Global.currentFace = null;
@@ -269,7 +269,7 @@ func _on_f_2_pressed() -> void:
 
 func _on_f_3_pressed() -> void:
 	if Global.currentFace != null: 
-		Global.currentFace.hide()
+		currf.hide()
 	if Global.currentFace == 3: 
 		$bigeyes.hide()
 		Global.currentFace = null;
@@ -367,10 +367,10 @@ func _on_e_2_pressed() -> void:
 		$singleant.show()
 
 func _on_e_3_pressed() -> void:
-	if Global.ear: 
-		Global.ear = 0
+	if Global.ears: 
+		Global.ears = 0
 	else: 
-		Global.ear = 1
+		Global.ears = 1
 	$ear.visible = !$ear.visible
 	
 func _on_e_4_pressed() -> void:
@@ -386,22 +386,22 @@ func _on_texture_button_pressed() -> void:
 func _on_e_5_pressed() -> void:
 	if Global.currentGlasses != null: 
 		currg.hide()
-	if Global.currentGlasses == $glasses: 
+	if Global.currentGlasses == 1: 
 		$glasses.hide()
 		Global.currentGlasses = null;
 	else:
-		Global.currentGlasses = $glasses
+		Global.currentGlasses = 1
 		currg = $glasses
 		$glasses.show()
 
 func _on_e_6_pressed() -> void:
 	if Global.currentGlasses != null: 
 		currg.hide()
-	if Global.currentGlasses == $sunglasses: 
+	if Global.currentGlasses == 2: 
 		$sunglasses.hide()
 		Global.currentGlasses = null;
 	else:
-		Global.currentGlasses = $sunglasses
+		Global.currentGlasses = 2
 		currg = $sunglasses
 		$sunglasses.show()
 

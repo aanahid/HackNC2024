@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ll8nkawifktc"]
+[gd_scene load_steps=48 format=3 uid="uid://ll8nkawifktc"]
 
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_n256q"]
 [ext_resource type="Script" path="res://scripts/dress_invade.gd" id="1_w6f6x"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ccv4fjyaxmori" path="res://assets/Dressup/bottoms/greyskirt.png" id="9_818r4"]
 [ext_resource type="Texture2D" uid="uid://berfma7vgk82" path="res://assets/Dressup/extra/antennas2.png" id="9_bu5qv"]
 [ext_resource type="Texture2D" uid="uid://b6edohdfexe0s" path="res://assets/Dressup/hair/pinkfront.png" id="9_owo4e"]
-[ext_resource type="Texture2D" uid="uid://xplck5c4rxgs" path="res://assets/Dressup/bunnyslippers.png" id="10_4a6rt"]
+[ext_resource type="Texture2D" uid="uid://dtruv1jtce1f5" path="res://assets/Dressup/shoes/bunnyslippers.png" id="10_4a6rt"]
 [ext_resource type="Texture2D" uid="uid://dday8jg3fmgp1" path="res://assets/Dressup/bottoms/longskirt.png" id="10_n66uc"]
 [ext_resource type="Texture2D" uid="uid://w7nxt1d3qifx" path="res://assets/Dressup/hair/purplefront.png" id="10_ne8he"]
 [ext_resource type="Texture2D" uid="uid://bpdcbcc4u6sy0" path="res://assets/Dressup/bottoms/blackshorts.png" id="11_e12ri"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://oobrbx0ypwua" path="res://assets/Dressup/hair/pinkback.png" id="12_pmigu"]
 [ext_resource type="Texture2D" uid="uid://doth6k3s34fh6" path="res://assets/Dressup/bottoms/blackpants.png" id="13_lolhd"]
 [ext_resource type="Texture2D" uid="uid://cphwp82baiq71" path="res://assets/Dressup/hair/purpleback.png" id="13_og5lb"]
-[ext_resource type="Texture2D" uid="uid://dtruv1jtce1f5" path="res://assets/Dressup/shoes/bunnyslippers.png" id="14_13f84"]
 [ext_resource type="Texture2D" uid="uid://1licrjgue202" path="res://assets/Dressup/shoes/grayshoes.png" id="15_34psp"]
 [ext_resource type="Texture2D" uid="uid://c5ipe6n2dvufj" path="res://assets/alien_dress_up.png" id="15_lbppi"]
 [ext_resource type="Texture2D" uid="uid://b2m4s8mnenebx" path="res://assets/Dressup/shoes/boots.png" id="16_b2w4g"]
@@ -44,7 +43,6 @@
 [ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="39_t1d1k"]
 [ext_resource type="Texture2D" uid="uid://pik4wjjqtntc" path="res://assets/icons/settings.png" id="43_1pvmd"]
 [ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="44_b2vq0"]
-[ext_resource type="AudioStream" uid="uid://xm5jwpf16cap" path="res://assets/spaceybg.mp3" id="45_8dyiv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eeng"]
 bg_color = Color(0.956863, 0.905882, 0.835294, 1)
@@ -404,7 +402,7 @@ offset_top = -302.0
 offset_right = 280.0
 offset_bottom = 91.0
 mouse_filter = 2
-texture = ExtResource("14_13f84")
+texture = ExtResource("10_4a6rt")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
@@ -1316,7 +1314,7 @@ offset_left = 56.0
 offset_top = 55.0
 offset_right = 542.0
 offset_bottom = 705.0
-texture = ExtResource("37_chbcf")
+texture = ExtResource("38_04g5d")
 expand_mode = 1
 stretch_mode = 4
 
@@ -1454,10 +1452,6 @@ offset_bottom = 64.0
 scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("44_b2vq0")
 button_pressed = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("45_8dyiv")
-parameters/looping = false
 
 [connection signal="pressed" from="Items/clothes/clothes_button" to="." method="_on_clothes_button_pressed"]
 [connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox/c1" to="." method="_on_please_pressed"]
