@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://ovmo1inmol6"]
+[gd_scene load_steps=4 format=3 uid="uid://ovmo1inmol6"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_0s207"]
+[ext_resource type="Texture2D" uid="uid://dlxtwdwdydpya" path="res://assets/backgrounds/spacebg.jpg" id="1_qtioq"]
+[ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="2_3lek3"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -7,3 +11,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0s207")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -303.0
+offset_top = -198.0
+offset_right = 1617.0
+offset_bottom = 882.0
+texture = ExtResource("1_qtioq")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 0
+offset_left = 87.0
+offset_top = 56.0
+offset_right = 1255.0
+offset_bottom = 724.0
+theme_override_fonts/font = ExtResource("2_3lek3")
+theme_override_font_sizes/font_size = 42
+text = "In a distant galaxy, a mysterious blue and green planet called Earth has sparked the interest of your alien species. 
+
+Plans have been organized to investigate the living species of Earth. 
+
+You have been chosen for this mission, but you cannot embark on your expedition without the perfect outfit."
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 0
+offset_left = 960.0
+offset_top = 654.0
+offset_right = 1560.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("2_3lek3")
+theme_override_font_sizes/font_size = 24
+text = "Enter to continue...
+"
+autowrap_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

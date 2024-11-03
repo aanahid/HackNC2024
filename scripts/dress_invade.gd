@@ -7,6 +7,16 @@ extends Node2D
 func _ready():
 	Global.currentFace = $eyes2
 	Global.currentShoes = $bunnyslippers
+	Global.currentBangs = $pinkfront
+	Global.currentHair = $pinkback
+	Global.currentAntenna = $antennas2
+	
+	if Global.round == 1: 
+		$Theme/theme1/HBoxContainer/Label.text = "You must dress to invade!"
+	elif Global.round == 2: 
+		$Theme/theme1/HBoxContainer/Label.text = "You must dress to evade government agents trying to capture you for experimentation."
+	elif Global.round == 3:
+		$Theme/theme1/HBoxContainer/Label.text = "You can dress as a human to continue exploring earth or dress in your alien form to prepare for the journey back home."
 
 func _on_clothes_button_pressed():
 	var clothes_box = $Items/clothes.get_theme_stylebox("panel")
@@ -14,8 +24,8 @@ func _on_clothes_button_pressed():
 	var extra_box = $Items/extra.get_theme_stylebox("panel")
 	
 	clothes_box.bg_color = Color("#E7ABAC")
-	faces_box.bg_color = Color("#848484")
-	extra_box.bg_color = Color("#646464")
+	faces_box.bg_color = Color("#931f4b")
+	extra_box.bg_color = Color("#931f4b")
 	
 	clothes_items.show()
 	faces_items.hide()
@@ -26,9 +36,9 @@ func _on_faces_button_pressed():
 	var faces_box = $Items/faces.get_theme_stylebox("panel")
 	var extra_box = $Items/extra.get_theme_stylebox("panel")
 	
-	clothes_box.bg_color = Color("#848484")
+	clothes_box.bg_color = Color("#931f4b")
 	faces_box.bg_color = Color("#E7ABAC")
-	extra_box.bg_color = Color("#848484")
+	extra_box.bg_color = Color("#931f4b")
 	
 	clothes_items.hide()
 	faces_items.show()
@@ -39,8 +49,8 @@ func _on_extra_button_pressed() -> void:
 	var faces_box = $Items/faces.get_theme_stylebox("panel")
 	var extra_box = $Items/extra.get_theme_stylebox("panel")
 	
-	clothes_box.bg_color = Color("#646464")
-	faces_box.bg_color = Color("#848484")
+	clothes_box.bg_color = Color("#931f4b")
+	faces_box.bg_color = Color("#931f4b")
 	extra_box.bg_color = Color("#E7ABAC")
 	
 	clothes_items.hide()
@@ -314,3 +324,6 @@ func _on_e_3_pressed() -> void:
 
 func _on_e_4_pressed() -> void:
 	$tail.visible = !$tail.visible
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/cutscene.tscn")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl2twv68pwqyv"]
+[gd_scene load_steps=4 format=3 uid="uid://b4kdp8ewf8c25"]
 
 [ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="1_30xqh"]
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="2_7dn3j"]
-[ext_resource type="Texture2D" path="res://assets/icons/arrow.png" id="3_basqy"]
 [ext_resource type="FontFile" uid="uid://ydi4j86nisvg" path="res://assets/Dressup/ZenDots-Regular.ttf" id="3_ham1a"]
 
 [node name="Cutscene" type="Node2D"]
@@ -43,13 +42,3 @@ theme_override_fonts/font = ExtResource("3_ham1a")
 theme_override_font_sizes/font_size = 25
 text = "This is placeholder This is placeholder"
 autowrap_mode = 2
-
-[node name="TextureButton" type="TextureButton" parent="."]
-visible = false
-offset_left = 1150.0
-offset_top = 593.0
-offset_right = 1240.0
-offset_bottom = 683.0
-texture_normal = ExtResource("3_basqy")
-ignore_texture_size = true
-stretch_mode = 0
