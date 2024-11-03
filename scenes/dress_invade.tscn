@@ -1379,6 +1379,7 @@ offset_right = 83.0
 offset_bottom = 74.0
 
 [node name="setting_icon" type="TextureRect" parent="settings"]
+layout_mode = 0
 offset_top = 2.0
 offset_right = 58.0
 offset_bottom = 68.0
@@ -1428,6 +1429,7 @@ offset_bottom = 64.0
 color = Color(0.364706, 0.184314, 0.290196, 1)
 
 [node name="purple" type="TextureButton" parent="settings/Panel/background color/ColorRect2"]
+layout_mode = 0
 offset_right = 22.0
 offset_bottom = 22.0
 

@@ -27,8 +27,10 @@ func start_music():
 		audio_stream.play()
 		
 func toggle_music():
+	print("toggle")
 	music_on = !music_on  # Toggle the boolean state
 	if music_on:
 		audio_stream.play()
 	else:
+		print("music off")
 		audio_stream.stop()
