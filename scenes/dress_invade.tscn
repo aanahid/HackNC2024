@@ -104,23 +104,23 @@ custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
-[node name="c1" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 6.0
-offset_right = 115.0
-offset_bottom = 115.0
-
 [node name="greytop" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox"]
 layout_mode = 0
 offset_left = -107.0
 offset_top = -93.0
 offset_right = 284.0
 offset_bottom = 381.0
+mouse_filter = 2
 texture = ExtResource("4_lwye8")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c1" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="cwhitebox2" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -128,20 +128,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="jersey" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox2"]
+layout_mode = 0
 offset_left = -77.0
 offset_top = -78.0
 offset_right = 244.0
 offset_bottom = 308.0
+mouse_filter = 2
 texture = ExtResource("5_8urba")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
 
-[node name="c2" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox2/jersey"]
-offset_left = 83.0
-offset_top = 82.0
-offset_right = 191.0
-offset_bottom = 192.0
+[node name="c2" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox2"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 113.0
+offset_bottom = 111.0
 
 [node name="cwhitebox3" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -150,24 +152,34 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="dropshadow" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox3"]
 modulate = Color(0.556953, 0.556953, 0.556953, 1)
+layout_mode = 0
 offset_left = -102.0
 offset_top = -95.0
 offset_right = 302.0
 offset_bottom = 377.0
+mouse_filter = 2
 texture = ExtResource("6_1a76o")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
 
 [node name="jersey" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox3"]
+layout_mode = 0
 offset_left = -92.0
 offset_top = -86.0
 offset_right = 278.0
 offset_bottom = 357.0
+mouse_filter = 2
 texture = ExtResource("6_1a76o")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c3" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox3"]
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 114.0
+offset_bottom = 111.0
 
 [node name="cwhitebox4" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -175,14 +187,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="spacesuittop" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox4"]
+layout_mode = 0
 offset_left = -54.0
 offset_top = -54.0
 offset_right = 190.0
 offset_bottom = 264.0
+mouse_filter = 2
 texture = ExtResource("7_vxb0b")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c4" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox4"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="cwhitebox5" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -190,14 +210,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="suittop" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox5"]
+layout_mode = 0
 offset_left = -54.0
 offset_top = -54.0
 offset_right = 190.0
 offset_bottom = 264.0
+mouse_filter = 2
 texture = ExtResource("8_lvfqw")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c5" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox5"]
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 112.0
+offset_bottom = 112.0
 
 [node name="cwhitebox6" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -205,14 +233,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="greyskirt" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox6"]
+layout_mode = 0
 offset_left = -69.0
 offset_top = -100.0
 offset_right = 175.0
 offset_bottom = 218.0
+mouse_filter = 2
 texture = ExtResource("9_818r4")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c6" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox6"]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 114.0
+offset_bottom = 112.0
 
 [node name="cwhitebox7" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -220,14 +256,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="longskirt" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox7"]
+layout_mode = 0
 offset_left = -37.0
 offset_top = -86.0
 offset_right = 149.0
 offset_bottom = 150.0
+mouse_filter = 2
 texture = ExtResource("10_n66uc")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c7" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox7"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 112.0
+offset_bottom = 110.0
 
 [node name="cwhitebox8" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -235,14 +279,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="blackshorts" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox8"]
+layout_mode = 0
 offset_left = -57.0
 offset_top = -90.0
 offset_right = 195.0
 offset_bottom = 204.0
+mouse_filter = 2
 texture = ExtResource("11_e12ri")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c8" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox8"]
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 113.0
+offset_bottom = 112.0
 
 [node name="cwhitebox9" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -250,14 +302,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="bluepants" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox9"]
+layout_mode = 0
 offset_left = -43.0
 offset_top = -99.0
 offset_right = 194.0
 offset_bottom = 163.0
+mouse_filter = 2
 texture = ExtResource("12_kefuk")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c9" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox9"]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 114.0
+offset_bottom = 110.0
 
 [node name="cwhitebox10" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -265,14 +325,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="blackpants" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox10"]
+layout_mode = 0
 offset_left = -36.0
 offset_top = -94.0
 offset_right = 171.0
 offset_bottom = 143.0
+mouse_filter = 2
 texture = ExtResource("13_lolhd")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c10" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox10"]
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 106.0
+offset_bottom = 108.0
 
 [node name="cwhitebox11" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -280,14 +348,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="bunnyslipprs" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox11"]
+layout_mode = 0
 offset_left = -99.0
 offset_top = -302.0
 offset_right = 280.0
 offset_bottom = 91.0
+mouse_filter = 2
 texture = ExtResource("14_13f84")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c11" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox11"]
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 106.0
+offset_bottom = 110.0
 
 [node name="cwhitebox12" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -295,14 +371,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="grayshoes" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox12"]
+layout_mode = 0
 offset_left = -97.0
 offset_top = -297.0
 offset_right = 282.0
 offset_bottom = 96.0
+mouse_filter = 2
 texture = ExtResource("15_34psp")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c12" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox12"]
+offset_left = 9.0
+offset_top = 13.0
+offset_right = 114.0
+offset_bottom = 116.0
 
 [node name="cwhitebox13" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -310,14 +394,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="boots" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox13"]
+layout_mode = 0
 offset_left = -97.0
 offset_top = -297.0
 offset_right = 282.0
 offset_bottom = 96.0
+mouse_filter = 2
 texture = ExtResource("16_b2w4g")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c13" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox13"]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 114.0
+offset_bottom = 112.0
 
 [node name="cwhitebox14" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -325,14 +417,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="blueshoes" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox14"]
+layout_mode = 0
 offset_left = -97.0
 offset_top = -297.0
 offset_right = 282.0
 offset_bottom = 96.0
+mouse_filter = 2
 texture = ExtResource("17_hyu0y")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c14" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox14"]
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 114.0
+offset_bottom = 109.0
 
 [node name="cwhitebox15" type="Panel" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -340,14 +440,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="blackshoes" type="TextureRect" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox15"]
+layout_mode = 0
 offset_left = -97.0
 offset_top = -297.0
 offset_right = 282.0
 offset_bottom = 96.0
+mouse_filter = 2
 texture = ExtResource("18_842wp")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
+
+[node name="c15" type="TextureButton" parent="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox15"]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 114.0
+offset_bottom = 110.0
 
 [node name="faces" type="Panel" parent="Items"]
 show_behind_parent = true
@@ -403,10 +511,17 @@ offset_left = -297.0
 offset_top = -59.0
 offset_right = 423.0
 offset_bottom = 608.0
+mouse_filter = 2
 texture = ExtResource("7_c86hr")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f1" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox2" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -420,10 +535,17 @@ offset_left = -297.0
 offset_top = -59.0
 offset_right = 423.0
 offset_bottom = 608.0
+mouse_filter = 2
 texture = ExtResource("8_xe8pn")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f2" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox2"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox3" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -432,14 +554,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="bigeyes" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox3"]
 clip_contents = true
+layout_mode = 0
 offset_left = -297.0
 offset_top = -59.0
 offset_right = 423.0
 offset_bottom = 608.0
+mouse_filter = 2
 texture = ExtResource("7_ur4nk")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f3" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox3"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox4" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -448,14 +578,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="bluefront" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox4"]
 clip_contents = true
+layout_mode = 0
 offset_left = -186.0
 offset_top = -11.0
 offset_right = 331.0
 offset_bottom = 512.0
+mouse_filter = 2
 texture = ExtResource("8_02iq4")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f4" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox4"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox5" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -464,14 +602,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="pinkfront" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox5"]
 clip_contents = true
+layout_mode = 0
 offset_left = -186.0
 offset_top = -11.0
 offset_right = 331.0
 offset_bottom = 512.0
+mouse_filter = 2
 texture = ExtResource("9_owo4e")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f5" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox5"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox6" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -480,14 +626,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="purplefront" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox6"]
 clip_contents = true
+layout_mode = 0
 offset_left = -186.0
 offset_top = -11.0
 offset_right = 331.0
 offset_bottom = 512.0
+mouse_filter = 2
 texture = ExtResource("10_ne8he")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f6" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox6"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox7" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -496,14 +650,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="blueback" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox7"]
 clip_contents = true
+layout_mode = 0
 offset_left = -81.0
 offset_top = -13.0
 offset_right = 229.0
 offset_bottom = 323.0
+mouse_filter = 2
 texture = ExtResource("11_p4bqh")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f7" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox7"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox8" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -512,14 +674,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="pinkback" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox8"]
 clip_contents = true
+layout_mode = 0
 offset_left = -101.0
 offset_top = -7.0
 offset_right = 249.0
 offset_bottom = 376.0
+mouse_filter = 2
 texture = ExtResource("12_pmigu")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f8" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox8"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox9" type="Panel" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -528,14 +698,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="purpleback" type="TextureRect" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox9"]
 clip_contents = true
+layout_mode = 0
 offset_left = -95.0
 offset_top = 1.0
 offset_right = 255.0
 offset_bottom = 384.0
+mouse_filter = 2
 texture = ExtResource("13_og5lb")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="f9" type="TextureButton" parent="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox9"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="extra" type="Panel" parent="Items"]
 show_behind_parent = true
@@ -579,14 +757,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="antennas2" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox"]
 clip_contents = true
+layout_mode = 0
 offset_left = -328.0
 offset_top = 18.0
 offset_right = 467.0
 offset_bottom = 766.0
+mouse_filter = 2
 texture = ExtResource("9_bu5qv")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="e1" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox2" type="Panel" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -595,14 +781,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="singleantenna" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox2"]
 clip_contents = true
+layout_mode = 0
 offset_left = -340.0
 offset_top = 14.0
 offset_right = 455.0
 offset_bottom = 762.0
+mouse_filter = 2
 texture = ExtResource("31_icylq")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="e2" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox2"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox3" type="Panel" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -611,14 +805,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="ear" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox3"]
 clip_contents = true
+layout_mode = 0
 offset_left = -252.0
 offset_top = -59.0
 offset_right = 543.0
 offset_bottom = 689.0
+mouse_filter = 2
 texture = ExtResource("32_iy60b")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="e3" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox3"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="whitebox4" type="Panel" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid"]
 custom_minimum_size = Vector2(120, 120)
@@ -627,14 +829,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eeng")
 
 [node name="tail" type="TextureRect" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox4"]
 clip_contents = true
+layout_mode = 0
 offset_left = -105.0
 offset_top = -98.0
 offset_right = 312.0
 offset_bottom = 307.0
+mouse_filter = 2
 texture = ExtResource("33_ewe55")
 expand_mode = 1
 stretch_mode = 5
 metadata/_edit_lock_ = true
+
+[node name="e4" type="TextureButton" parent="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox4"]
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 113.0
 
 [node name="extra_button" type="TextureButton" parent="Items/extra"]
 layout_mode = 0
@@ -748,6 +958,16 @@ offset_top = 55.0
 offset_right = 542.0
 offset_bottom = 705.0
 texture = ExtResource("8_xe8pn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bigeyes" type="TextureRect" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 542.0
+offset_bottom = 705.0
+texture = ExtResource("7_ur4nk")
 expand_mode = 1
 stretch_mode = 4
 
@@ -920,8 +1140,41 @@ texture = ExtResource("8_lvfqw")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="Items2" type="Panel" parent="."]
+offset_left = 630.0
+offset_top = 563.0
+offset_right = 1105.0
+offset_bottom = 698.0
+theme_override_styles/panel = ExtResource("1_n256q")
+
 [connection signal="pressed" from="Items/clothes/clothes_button" to="." method="_on_clothes_button_pressed"]
-[connection signal="gui_input" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox" to="." method="_on_cwhitebox_gui_input"]
-[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox2/jersey/c2" to="." method="_on_c_2_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox/c1" to="." method="_on_please_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox2/c2" to="." method="_on_c2_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox3/c3" to="." method="_on_c_3_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox4/c4" to="." method="_on_c_4_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox5/c5" to="." method="_on_c_5_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox6/c6" to="." method="_on_c_6_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox7/c7" to="." method="_on_c_7_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox8/c8" to="." method="_on_c_8_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox9/c9" to="." method="_on_c_9_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox10/c10" to="." method="_on_c_10_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox11/c11" to="." method="_on_c_11_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox12/c12" to="." method="_on_c_12_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox13/c13" to="." method="_on_c_13_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox14/c14" to="." method="_on_c_14_pressed"]
+[connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox15/c15" to="." method="_on_c_15_pressed"]
 [connection signal="pressed" from="Items/faces/faces_button" to="." method="_on_faces_button_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox/f1" to="." method="_on_f_1_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox2/f2" to="." method="_on_f_2_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox3/f3" to="." method="_on_f_3_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox4/f4" to="." method="_on_f_4_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox5/f5" to="." method="_on_f_5_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox6/f6" to="." method="_on_f_6_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox7/f7" to="." method="_on_f_7_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox8/f8" to="." method="_on_f_8_pressed"]
+[connection signal="pressed" from="Items/faces/face_items/faces_control/ScrollContainer/face_grid/whitebox9/f9" to="." method="_on_f_9_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox/e1" to="." method="_on_e_1_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox2/e2" to="." method="_on_e_2_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox3/e3" to="." method="_on_e_3_pressed"]
+[connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox4/e4" to="." method="_on_e_4_pressed"]
 [connection signal="pressed" from="Items/extra/extra_button" to="." method="_on_extra_button_pressed"]

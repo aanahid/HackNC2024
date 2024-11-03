@@ -4,13 +4,9 @@ extends Node2D
 @onready var faces_items = $Items/faces/face_items
 @onready var extra_items = $Items/extra/extra_items
 
-@onready var currentFace = $eyes2
-@onready var currentBangs = null
-@onready var currentHair = null
-@onready var currentTop = null
-@onready var currentBottom = null
-@onready var currentShoes = $bunnyslippers
-@onready var currentAntenna = null
+func _ready():
+	Global.currentFace = $eyes2
+	Global.currentShoes = $bunnyslippers
 
 func _on_clothes_button_pressed():
 	var clothes_box = $Items/clothes.get_theme_stylebox("panel")
@@ -52,31 +48,269 @@ func _on_extra_button_pressed() -> void:
 	extra_items.show()
 
 
-#func _on_c_1_pressed() -> void:
-	#print("click")
-	#if currentTop != null:
-		#currentTop.hide()
-		#
-	#currentTop = $greytop
-	#print("put on grey top")
-	#currentTop.show()
+func _on_please_pressed() -> void:
+	print("clicked")
+	if Global.currentTop != null: 
+		Global.currentTop.hide()
+	if Global.currentTop == $greytop: 
+		Global.currentTop = null;
+	else: 
+		Global.currentTop = $greytop
+		$greytop.show()
+
+func _on_c2_pressed() -> void:
+	if Global.currentTop != null: 
+		Global.currentTop.hide()
+	if Global.currentTop == $jersey: 
+		$jersey.hide()
+		Global.currentTop = null;
+	else: 
+		Global.currentTop = $jersey
+		$jersey.show()
+
+func _on_c_3_pressed() -> void:
+	if Global.currentTop != null: 
+		Global.currentTop.hide()
+	if Global.currentTop == $needspace: 
+		$needspace.hide()
+		Global.currentTop = null;
+	else: 
+		Global.currentTop = $needspace
+		$needspace.show()
+
+func _on_c_4_pressed() -> void:
+	if Global.currentTop != null: 
+		Global.currentTop.hide()
+	if Global.currentTop == $spacesuit: 
+		$spacesuit.hide()
+		Global.currentTop = null;
+	else: 
+		Global.currentTop = $spacesuit
+		$spacesuit.show()
+
+func _on_c_5_pressed() -> void:
+	if Global.currentTop != null: 
+		Global.currentTop.hide()
+	if Global.currentTop == $suittop: 
+		$suittop.hide()
+		Global.currentTop = null;
+	else: 
+		Global.currentTop = $suittop
+		$suittop.show()
+
+func _on_c_6_pressed() -> void:
+	if Global.currentBottom != null: 
+		Global.currentBottom.hide()
+	if Global.currentBottom == $greyskirt: 
+		$greyskirt.hide()
+		Global.currentBottom = null;
+	else: 
+		Global.currentBottom = $greyskirt
+		$greyskirt.show()
+
+func _on_c_7_pressed() -> void:
+	if Global.currentBottom != null: 
+		Global.currentBottom.hide()
+	if Global.currentBottom == $longskirt: 
+		$longskirt.hide()
+		Global.currentBottom = null;
+	else: 
+		Global.currentBottom = $longskirt
+		$longskirt.show()
+
+func _on_c_8_pressed() -> void:
+	if Global.currentBottom != null: 
+		Global.currentBottom.hide()
+	if Global.currentBottom == $blackshorts: 
+		$blackshorts.hide()
+		Global.currentBottom = null;
+	else: 
+		Global.currentBottom = $blackshorts
+		$blackshorts.show()
+
+func _on_c_9_pressed() -> void:
+	if Global.currentBottom != null: 
+		Global.currentBottom.hide()
+	if Global.currentBottom == $bluesuitpants: 
+		$bluesuitpants.hide()
+		Global.currentBottom = null;
+	else: 
+		Global.currentBottom = $bluesuitpants
+		$bluesuitpants.show()
+
+func _on_c_10_pressed() -> void:
+	if Global.currentBottom != null: 
+		Global.currentBottom.hide()
+	if Global.currentBottom == $blackpants: 
+		$blackpants.hide()
+		Global.currentBottom = null;
+	else: 
+		Global.currentBottom = $blackpants
+		$blackpants.show()
+
+func _on_c_11_pressed() -> void:
+	if Global.currentShoes != null: 
+		Global.currentShoes.hide()
+	if Global.currentShoes == $bunnyslippers: 
+		$bunnyslippers.hide()
+		Global.currentShoes = null;
+	else: 
+		Global.currentShoes = $bunnyslippers
+		$bunnyslippers.show()
+
+func _on_c_12_pressed() -> void:
+	if Global.currentShoes != null: 
+		Global.currentShoes.hide()
+	if Global.currentShoes == $grayshoes: 
+		$grayshoes.hide()
+		Global.currentShoes = null;
+	else: 
+		Global.currentShoes = $grayshoes
+		$grayshoes.show()
+
+func _on_c_13_pressed() -> void:
+	if Global.currentShoes != null: 
+		Global.currentShoes.hide()
+	if Global.currentShoes == $boots: 
+		$boots.hide()
+		Global.currentShoes = null;
+	else:
+		Global.currentShoes = $boots
+		$boots.show()
+
+func _on_c_14_pressed() -> void:
+	if Global.currentShoes != null: 
+		Global.currentShoes.hide()
+	if Global.currentShoes == $blueshoes: 
+		$blueshoes.hide()
+		Global.currentShoes = null;
+	else: 
+		Global.currentShoes = $blueshoes
+		$blueshoes.show()
+
+func _on_c_15_pressed() -> void:
+	if Global.currentShoes != null: 
+		Global.currentShoes.hide()
+	if Global.currentShoes == $blackshoes: 
+		$blackshoes.hide()
+		Global.currentShoes = null;
+	else:
+		Global.currentShoes = $blackshoes
+		$blackshoes.show()
+
+func _on_f_1_pressed() -> void:
+	if Global.currentFace != null: 
+		Global.currentFace.hide()
+	if Global.currentFace == $eyes: 
+		$eyes.hide()
+		Global.currentFace = null;
+	else:
+		Global.currentFace = $eyes
+		$eyes.show()
+
+func _on_f_2_pressed() -> void:
+	if Global.currentFace != null: 
+		Global.currentFace.hide()
+	if Global.currentFace == $eyes2: 
+		$eyes2.hide()
+		Global.currentFace = null;
+	else:
+		Global.currentFace = $eyes2
+		$eyes2.show()
+
+func _on_f_3_pressed() -> void:
+	if Global.currentFace != null: 
+		Global.currentFace.hide()
+	if Global.currentFace == $bigeyes: 
+		$bigeyes.hide()
+		Global.currentFace = null;
+	else:
+		Global.currentFace = $bigeyes
+		$bigeyes.show()
+
+func _on_f_4_pressed() -> void:
+	if Global.currentBangs != null: 
+		Global.currentBangs.hide()
+	if Global.currentBangs == $bluefront: 
+		$bluefront.hide()
+		Global.currentBangs = null;
+	else:
+		Global.currentBangs = $bluefront
+		$bluefront.show()
+
+func _on_f_5_pressed() -> void:
+	if Global.currentBangs != null: 
+		Global.currentBangs.hide()
+	if Global.currentBangs == $pinkfront: 
+		$pinkfront.hide()
+		Global.currentBangs = null;
+	else:
+		Global.currentBangs = $pinkfront
+		$pinkfront.show()
+
+func _on_f_6_pressed() -> void:
+	if Global.currentBangs != null: 
+		Global.currentBangs.hide()
+	if Global.currentBangs == $purplefront: 
+		$purplefront.hide()
+		Global.currentBangs = null;
+	else:
+		Global.currentBangs = $purplefront
+		$purplefront.show()
+
+func _on_f_7_pressed() -> void:
+	if Global.currentHair != null: 
+		Global.currentHair.hide()
+	if Global.currentHair == $blueback: 
+		$blueback.hide()
+		Global.currentHair = null;
+	else:
+		Global.currentHair = $blueback
+		$blueback.show()
+
+func _on_f_8_pressed() -> void:
+	if Global.currentHair != null: 
+		Global.currentHair.hide()
+	if Global.currentHair == $pinkback: 
+		$pinkback.hide()
+		Global.currentHair = null;
+	else:
+		Global.currentHair = $pinkback
+		$pinkback.show()
+
+func _on_f_9_pressed() -> void:
+	if Global.currentHair != null: 
+		Global.currentHair.hide()
+	if Global.currentHair == $purpleback: 
+		$purpleback.hide()
+		Global.currentHair = null;
+	else:
+		Global.currentHair = $purpleback
+		$purpleback.show()
 
 
-func _on_c_2_pressed() -> void:
-	print("click")
-	if currentTop != null:
-		currentTop.hide()
-	
-	currentTop = $jersey
-	print("put on jersey")
-	currentTop.show()
+func _on_e_1_pressed() -> void:
+	if Global.currentAntenna != null: 
+		Global.currentAntenna.hide()
+	if Global.currentAntenna == $antennas2: 
+		$antennas2.hide()
+		Global.currentAntenna = null;
+	else:
+		Global.currentAntenna = $antennas2
+		$antennas2.show()
 
+func _on_e_2_pressed() -> void:
+	if Global.currentAntenna != null: 
+		Global.currentAntenna.hide()
+	if Global.currentAntenna == $singleant: 
+		$singleant.hide()
+		Global.currentAntenna = null;
+	else:
+		Global.currentAntenna = $singleant
+		$singleant.show()
 
-func _on_cwhitebox_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
-		if currentTop != null:
-			currentTop.hide()
-		
-	currentTop = $greytop
-	print("put on grey top")
-	currentTop.show()
+func _on_e_3_pressed() -> void:
+	$ear.visible = !$ear.visible
+
+func _on_e_4_pressed() -> void:
+	$tail.visible = !$tail.visible
