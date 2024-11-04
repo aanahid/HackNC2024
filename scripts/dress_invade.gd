@@ -33,11 +33,11 @@ func _ready():
 	curra = $antennas2
 	
 	if Global.round == 1: 
-		$Theme/theme1/HBoxContainer/Label.text = "You must dress to invade!"
+		$Theme/theme1/HBoxContainer/Label.text = "Dress to invade!"
 	elif Global.round == 2: 
-		$Theme/theme1/HBoxContainer/Label.text = "You must dress to evade government agents trying to capture you for experimentation."
+		$Theme/theme1/HBoxContainer/Label.text = "Dress to evade capture!"
 	elif Global.round == 3:
-		$Theme/theme1/HBoxContainer/Label.text = "You can dress as a human to continue exploring earth or dress in your alien form to prepare for the journey back home."
+		$Theme/theme1/HBoxContainer/Label.text = "Dress to your heart's desire!"
 
 func _on_clothes_button_pressed():
 	var clothes_box = $Items/clothes.get_theme_stylebox("panel")

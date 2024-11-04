@@ -1,10 +1,11 @@
 extends Node
 
 var dialogue_lines = [
-		"Oh no! The invasion went awry and you find yourself stranded on Earth with nothing but fashionable attire and your sense of style.",
-		"You failed to evade the government agents. For what feels like an eternity, scientists take notes on your lack of fashion.",
-		"You successfully evaded the government agents with the help of a kind earthling that helps you avoid capture. It is up to you to decide whether you should remain on earth or return back to your home planet.",
-		"You continue to slay everyday. The universe is stunned at your amazing fashion. Good job!"
+		"Oh no! Your ship has malfunctioned and you find yourself stranded on Earth with nothing but fashionable attire. Try to blend in with the earthlings so you don't get caught by government agents! It might be a good idea to hide your antennas...",
+		"You failed to evade the government agents. For what feels like an eternity, scientists take notes on your lack of fashion. Maybe next time...",
+		"You successfully evaded the government agents with your super graphic ultra modern style that helps you avoid capture. It is up to you to decide whether you remain on earth or continue your journey through space.",
+		"You are a universal trendsetter who continues to slay everyday. The universe marvels at your stunning ensemble. Super-duper! ✨",
+		"The earthlings are starstruck by your revolutionary regalia. As a fashion ambassador for aliens, you have helped forge a peaceful alliance between species. Marvelous! 🌍"
 	]
 var curr_round = Global.round;
 @onready var dialogue_label = $HBoxContainer/Label

@@ -15,37 +15,39 @@ script = ExtResource("1_0s207")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -303.0
-offset_top = -198.0
-offset_right = 1617.0
-offset_bottom = 882.0
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("1_qtioq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.572549)
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 0
-offset_left = 87.0
-offset_top = 56.0
-offset_right = 1255.0
-offset_bottom = 724.0
+offset_left = 191.0
+offset_top = 236.0
+offset_right = 1056.0
+offset_bottom = 480.0
 theme_override_fonts/font = ExtResource("2_3lek3")
-theme_override_font_sizes/font_size = 42
-text = "In a distant galaxy, a mysterious blue and green planet called Earth has sparked the interest of your alien species. 
-
-Plans have been organized to investigate the living species of Earth. 
-
-You have been chosen for this mission, but you cannot embark on your expedition without the perfect outfit."
+theme_override_font_sizes/font_size = 39
+text = "In a distant galaxy, a mysterious blue and green planet called Earth has sparked the interest of your alien species. "
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
-custom_minimum_size = Vector2(600, 0)
 layout_mode = 0
-offset_left = 960.0
-offset_top = 654.0
-offset_right = 1560.0
-offset_bottom = 712.0
+offset_left = 838.0
+offset_top = 629.0
+offset_right = 1261.0
+offset_bottom = 688.0
 theme_override_fonts/font = ExtResource("2_3lek3")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
 text = "Enter to continue...
 "
 autowrap_mode = 2
