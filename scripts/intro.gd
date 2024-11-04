@@ -1,8 +1,8 @@
 extends Control
 var dialogue_lines = [
 	"In a distant galaxy, a mysterious blue and green planet called Earth has sparked the interest of your alien species. ",
-	"Plans have been made to investigate the living species of Earth to study their style.",
-	"You have been chosen for this mission, but you cannot embark on your expedition without the perfect attire."
+	"Your superiors want you to invade the planet and investigate the earthlings to study their style.",
+	"You have been chosen for this mission, but you cannot embark on your expedition without the perfect attire!"
 	]
 var curr_round = Global.round;
 @onready var dialogue_label = $Label

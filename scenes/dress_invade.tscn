@@ -1362,6 +1362,7 @@ offset_left = 1128.0
 offset_top = 592.0
 offset_right = 1257.0
 offset_bottom = 668.0
+mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3yh1n")
 
 [node name="TextureButton" type="TextureButton" parent="Next"]
@@ -1370,6 +1371,7 @@ offset_left = 16.0
 offset_top = 11.0
 offset_right = 120.0
 offset_bottom = 68.0
+mouse_default_cursor_shape = 2
 
 [node name="Label2" type="Label" parent="Next/TextureButton"]
 layout_mode = 0
@@ -1377,6 +1379,7 @@ offset_left = 7.0
 offset_top = 11.0
 offset_right = 94.0
 offset_bottom = 42.0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("39_oh70p")
 theme_override_font_sizes/font_size = 25
 text = "Done"
@@ -1395,6 +1398,7 @@ layout_mode = 0
 offset_top = -2.0
 offset_right = 61.0
 offset_bottom = 60.0
+mouse_default_cursor_shape = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -2,7 +2,7 @@ extends Node
 
 var dialogue_lines = [
 		"Oh no! Your ship has malfunctioned and you find yourself stranded. Try to blend in with the earthlings so you don't get caught by government agents! It might be a good idea to hide your antennas...",
-		"You failed to evade the government agents. For what feels like an eternity, scientists take notes on your lack of fashion. Maybe next time...",
+		"You failed to evade the government agents. For what feels like an eternity, scientists examine your extraterrestrial fashion. Maybe next time you won't get caught...",
 		"You successfully evaded the government agents with your super graphic ultra modern style that helps you avoid capture. It is up to you to decide whether you remain on earth or continue your journey through space.",
 		"You are a universal trendsetter who continues to slay everyday. The universe marvels at your stunning ensemble. Super-duper! ✨",
 		"The earthlings are starstruck by your revolutionary regalia. As a fashion ambassador for aliens, you have helped forge a peaceful alliance between species. Marvelous! 🌍"
@@ -97,7 +97,7 @@ func _ready():
 		print(line)
 		await display_text(line)
 	if curr_round == 2:
-		if Global.currentAntenna == null and Global.tail == 0:
+		if !isAlien():
 			var new_texture = preload("res://assets/backgrounds/street.png")
 			$"../../background".texture = new_texture
 			var line = dialogue_lines[2]
@@ -111,7 +111,7 @@ func _ready():
 			await display_text(line)
 		
 	if curr_round == 3:
-		if Global.currentAntenna == null and Global.tail == 0:
+		if !isAlien():
 			var new_texture = preload("res://assets/backgrounds/street.png")
 			$"../../background".texture = new_texture
 			

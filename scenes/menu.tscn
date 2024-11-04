@@ -51,6 +51,7 @@ offset_left = 608.0
 offset_top = 424.0
 offset_right = 773.0
 offset_bottom = 474.0
+mouse_default_cursor_shape = 2
 
 [node name="play_button" type="TextureRect" parent="Play"]
 visible = false
@@ -64,6 +65,7 @@ offset_left = 608.0
 offset_top = 504.0
 offset_right = 768.0
 offset_bottom = 560.0
+mouse_default_cursor_shape = 2
 
 [node name="Exit" type="TextureButton" parent="."]
 layout_mode = 0
@@ -71,6 +73,7 @@ offset_left = 608.0
 offset_top = 592.0
 offset_right = 768.0
 offset_bottom = 648.0
+mouse_default_cursor_shape = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
