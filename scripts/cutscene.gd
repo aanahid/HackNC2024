@@ -118,6 +118,8 @@ func _ready():
 		else:
 			var new_texture = preload("res://assets/backgrounds/spacebg.jpg")
 			$"../../background".texture = new_texture
+			$"../../MagazineTexture".show()
+			$"../../MagazineBG".show()
 		var line = dialogue_lines[3]
 		print(line)
 		await display_text(line)

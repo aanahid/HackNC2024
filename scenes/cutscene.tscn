@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b4kdp8ewf8c25"]
+[gd_scene load_steps=39 format=3 uid="uid://b4kdp8ewf8c25"]
 
 [ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="1_30xqh"]
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="2_7dn3j"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://7aebpifna2fi" path="res://assets/Dressup/tops/needspace.png" id="31_77xa5"]
 [ext_resource type="Texture2D" uid="uid://botrfavffp47b" path="res://assets/Dressup/tops/spacesuit.png" id="32_jidlk"]
 [ext_resource type="Texture2D" uid="uid://couvs6v83e2bq" path="res://assets/Dressup/tops/suittop.png" id="33_7pqww"]
+[ext_resource type="Texture2D" uid="uid://dwxkamytmmute" path="res://assets/magazine.png" id="34_24jec"]
 [ext_resource type="Texture2D" uid="uid://u277sev0bb25" path="res://assets/Dressup/extra/glasses.png" id="34_b73tm"]
 [ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="35_qhm78"]
 [ext_resource type="Texture2D" uid="uid://v757ancyigjy" path="res://assets/Dressup/extra/sunglasses.png" id="36_liy80"]
@@ -48,35 +49,13 @@ texture = ExtResource("1_30xqh")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="TextRect" type="Panel" parent="."]
-offset_left = 475.0
-offset_top = 339.0
-offset_right = 1243.0
-offset_bottom = 620.0
-theme_override_styles/panel = ExtResource("2_7dn3j")
-
-[node name="MarginContainer" type="MarginContainer" parent="TextRect"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = -1.0
-offset_right = 762.0
-offset_bottom = 276.0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-script = ExtResource("3_26x5t")
-
-[node name="Label" type="Label" parent="TextRect/MarginContainer"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.286275, 0.137255, 0.227451, 1)
-theme_override_fonts/font = ExtResource("3_ham1a")
-theme_override_font_sizes/font_size = 29
-text = "*You successfully evaded the government agents with your super graphic ultra modern style that helps you avoid capture. It is up to you to decide whether you remain on earth or continue your journey through space.\""
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+[node name="MagazineBG" type="ColorRect" parent="."]
+visible = false
+offset_left = 53.0
+offset_top = -41.0
+offset_right = 592.0
+offset_bottom = 701.0
+rotation = 0.15708
 
 [node name="tail" type="TextureRect" parent="."]
 visible = false
@@ -396,6 +375,47 @@ offset_bottom = 705.0
 texture = ExtResource("36_liy80")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="MagazineTexture" type="TextureRect" parent="."]
+visible = false
+offset_left = 67.0
+offset_top = -27.0
+offset_right = 583.0
+offset_bottom = 692.0
+rotation = 0.15708
+texture = ExtResource("34_24jec")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextRect" type="Panel" parent="."]
+offset_left = 475.0
+offset_top = 339.0
+offset_right = 1243.0
+offset_bottom = 620.0
+theme_override_styles/panel = ExtResource("2_7dn3j")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 762.0
+offset_bottom = 276.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("3_26x5t")
+
+[node name="Label" type="Label" parent="TextRect/MarginContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.286275, 0.137255, 0.227451, 1)
+theme_override_fonts/font = ExtResource("3_ham1a")
+theme_override_font_sizes/font_size = 29
+text = "*You successfully evaded the government agents with your super graphic ultra modern style that helps you avoid capture. It is up to you to decide whether you remain on earth or continue your journey through space.\""
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 838.0
