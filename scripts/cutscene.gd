@@ -14,6 +14,10 @@ var text_speed = 0.05  # Delay in seconds for each character
 var is_typing = false
 
 func _ready():
+	Global.music = preload("res://assets/spaceybg.mp3")
+	Global.stop_music()
+	if Global.music_on:
+		Global.start_music()
 	if Global.currentTop != null:
 		if Global.currentTop == 1:
 			$"../../greytop".show()

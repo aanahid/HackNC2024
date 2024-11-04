@@ -18,6 +18,11 @@ var background4 = preload("res://assets/backgrounds/street.png")
 var background5 = preload("res://assets/backgrounds/spacebg.jpg")
 	
 func _ready():
+	Global.music = preload("res://assets/alien.mp3")
+	Global.stop_music()
+	if Global.music_on:
+		Global.start_music()
+		
 	Global.connect("background_changed", Callable(self, "_on_background_changed"))
 	
 	Global.currentFace = 2

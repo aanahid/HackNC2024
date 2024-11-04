@@ -1,7 +1,9 @@
 extends Control
 
 func _ready() -> void:
-	Global.start_music()
+	Global.music = preload("res://assets/spaceybg.mp3")
+	if Global.music_on:
+		Global.start_music()
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://scenes/intro.tscn")

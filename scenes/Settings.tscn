@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://de4h3quj57qwm"]
+[gd_scene load_steps=11 format=3 uid="uid://dr50hke8rij2u"]
 
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_q2lc3"]
 [ext_resource type="Script" path="res://scenes/settings.gd" id="1_vpb32"]
@@ -152,6 +152,7 @@ offset_bottom = 64.0
 scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("2_t0517")
 button_pressed = true
+keep_pressed_outside = true
 
 [node name="X" type="Button" parent="Panel"]
 layout_mode = 0

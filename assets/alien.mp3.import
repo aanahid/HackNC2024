@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/alien.mp3-c6ca14286f13b5d763a3e444160344d0.mp
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

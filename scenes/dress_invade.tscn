@@ -43,7 +43,7 @@
 [ext_resource type="FontFile" uid="uid://ydi4j86nisvg" path="res://assets/Dressup/ZenDots-Regular.ttf" id="39_oh70p"]
 [ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="39_t1d1k"]
 [ext_resource type="Texture2D" uid="uid://pik4wjjqtntc" path="res://assets/icons/settings.png" id="43_1pvmd"]
-[ext_resource type="PackedScene" uid="uid://de4h3quj57qwm" path="res://scenes/Settings.tscn" id="43_h5ad4"]
+[ext_resource type="PackedScene" uid="uid://dr50hke8rij2u" path="res://scenes/Settings.tscn" id="43_h5ad4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eeng"]
 bg_color = Color(0.956863, 0.905882, 0.835294, 1)
@@ -535,6 +535,7 @@ offset_right = 100.0
 offset_bottom = 60.0
 
 [node name="face_items" type="CanvasLayer" parent="Items/faces"]
+layer = 0
 visible = false
 
 [node name="faces_control" type="Control" parent="Items/faces/face_items"]
@@ -805,6 +806,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="extra_items" type="CanvasLayer" parent="Items/extra"]
+layer = 0
 visible = false
 
 [node name="extra_control" type="Control" parent="Items/extra/extra_items"]
