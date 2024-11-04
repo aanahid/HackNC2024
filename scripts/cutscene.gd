@@ -142,9 +142,8 @@ func display_text(text: String) -> void:
 	is_typing = false
 
 func _input(event):
-	
-	if event is InputEventKey and event.is_pressed():
-		if event.keycode == Key.KEY_ENTER and is_typing:
+	if (event is InputEventKey and event.is_pressed() and event.keycode == Key.KEY_ENTER) or (event is InputEventMouseButton and event.is_pressed()):
+		if is_typing:
 			if Global.round == 1:
 				dialogue_label.text = dialogue_lines[0]
 			if Global.round == 2:
@@ -157,7 +156,7 @@ func _input(event):
 					dialogue_label.text = dialogue_lines[3]
 				else:
 					dialogue_label.text = dialogue_lines[4]
-				
+			
 			is_typing = false
 		else:
 			if curr_round == 2 and isAlien():

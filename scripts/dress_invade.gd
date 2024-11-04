@@ -395,6 +395,10 @@ func _on_e_4_pressed() -> void:
 func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
 
+func _input(event):
+	if (event is InputEventKey and event.is_pressed() and event.keycode == Key.KEY_ENTER):
+		get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
+
 func _on_e_5_pressed() -> void:
 	if Global.currentGlasses != null: 
 		currg.hide()

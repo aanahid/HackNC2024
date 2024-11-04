@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b4kdp8ewf8c25"]
+[gd_scene load_steps=38 format=3 uid="uid://b4kdp8ewf8c25"]
 
 [ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="1_30xqh"]
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="2_7dn3j"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://u277sev0bb25" path="res://assets/Dressup/extra/glasses.png" id="34_b73tm"]
 [ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="35_qhm78"]
 [ext_resource type="Texture2D" uid="uid://v757ancyigjy" path="res://assets/Dressup/extra/sunglasses.png" id="36_liy80"]
+[ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="37_yubol"]
 
 [node name="Cutscene" type="Node2D"]
 
@@ -48,10 +49,10 @@ expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="TextRect" type="Panel" parent="."]
-offset_left = 473.0
-offset_top = 417.0
-offset_right = 1241.0
-offset_bottom = 698.0
+offset_left = 475.0
+offset_top = 339.0
+offset_right = 1243.0
+offset_bottom = 620.0
 theme_override_styles/panel = ExtResource("2_7dn3j")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextRect"]
@@ -394,3 +395,14 @@ offset_bottom = 705.0
 texture = ExtResource("36_liy80")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 838.0
+offset_top = 629.0
+offset_right = 1261.0
+offset_bottom = 688.0
+theme_override_fonts/font = ExtResource("37_yubol")
+theme_override_font_sizes/font_size = 32
+text = "Enter to continue...
+"
+autowrap_mode = 2
