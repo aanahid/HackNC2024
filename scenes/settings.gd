@@ -18,3 +18,6 @@ func _on_street_2_pressed() -> void:
 
 func _on_space_pressed() -> void:
 	Global.background = 5
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	Global.toggle_music()
