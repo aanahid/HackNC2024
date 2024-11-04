@@ -141,7 +141,11 @@ func display_text(text: String) -> void:
 
 	is_typing = false
 
+func _on_settings_pressed() -> void:
+	$"../../setting_icon/settings/CanvasLayer/Settings".show()
+
 func _input(event):
+	
 	if (event is InputEventKey and event.is_pressed() and event.keycode == Key.KEY_ENTER) or (event is InputEventMouseButton and event.is_pressed()):
 		if is_typing:
 			if Global.round == 1:

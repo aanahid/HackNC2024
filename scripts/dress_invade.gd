@@ -437,7 +437,7 @@ func _on_settings_pressed() -> void:
 func _on_background_changed(new_value):
 	if Global.background == 1: 
 		$imgbackground.hide()
-		$background.color = Color("#ebdca1")
+		$background.color = Color("#889d42")
 	elif Global.background == 2: 
 		$imgbackground.hide()
 		$background.color = Color("5d2f4a")

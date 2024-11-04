@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b4kdp8ewf8c25"]
+[gd_scene load_steps=40 format=3 uid="uid://b4kdp8ewf8c25"]
 
 [ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="1_30xqh"]
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="2_7dn3j"]
@@ -37,6 +37,8 @@
 [ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="35_qhm78"]
 [ext_resource type="Texture2D" uid="uid://v757ancyigjy" path="res://assets/Dressup/extra/sunglasses.png" id="36_liy80"]
 [ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="37_yubol"]
+[ext_resource type="Texture2D" uid="uid://pik4wjjqtntc" path="res://assets/icons/settings.png" id="38_o4xtn"]
+[ext_resource type="PackedScene" uid="uid://dr50hke8rij2u" path="res://scenes/Settings.tscn" id="39_kmf81"]
 
 [node name="Cutscene" type="Node2D"]
 
@@ -407,3 +409,30 @@ theme_override_font_sizes/font_size = 32
 text = "Enter to continue...
 "
 autowrap_mode = 2
+
+[node name="setting_icon" type="TextureRect" parent="."]
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 80.0
+offset_bottom = 80.0
+texture = ExtResource("38_o4xtn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="settings" type="TextureButton" parent="setting_icon"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 61.0
+offset_bottom = 60.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="setting_icon/settings"]
+
+[node name="Settings" parent="setting_icon/settings/CanvasLayer" instance=ExtResource("39_kmf81")]
+visible = false
+top_level = true
+offset_left = 448.0
+offset_top = 176.0
+offset_right = -808.0
+offset_bottom = -520.0
+
+[connection signal="pressed" from="setting_icon/settings" to="TextRect/MarginContainer" method="_on_settings_pressed"]
