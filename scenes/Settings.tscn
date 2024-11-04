@@ -61,145 +61,160 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vpb32")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.619608)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
 layout_mode = 0
-offset_right = 352.0
-offset_bottom = 288.0
+offset_right = 1280.0
+offset_bottom = 720.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="Panel" parent="ColorRect/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
 theme_override_styles/panel = ExtResource("1_q2lc3")
 
-[node name="Settings" type="Label" parent="Panel"]
+[node name="Settings" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 96.0
-offset_top = 32.0
-offset_right = 255.0
-offset_bottom = 69.0
+offset_left = 122.0
+offset_top = 38.0
+offset_right = 281.0
+offset_bottom = 75.0
 theme_override_colors/font_color = Color(0.286275, 0.137255, 0.227451, 1)
 theme_override_fonts/font = ExtResource("2_t0517")
 theme_override_font_sizes/font_size = 30
 text = "Settings
 "
 
-[node name="background color" type="Label" parent="Panel"]
+[node name="background color" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 96.0
-offset_right = 316.0
-offset_bottom = 121.0
+offset_left = 64.0
+offset_top = 102.0
+offset_right = 342.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(0.286275, 0.137255, 0.227451, 1)
 theme_override_fonts/font = ExtResource("2_t0517")
 theme_override_font_sizes/font_size = 20
 text = "Dress Up Background"
 
-[node name="Music" type="Label" parent="Panel"]
+[node name="Music" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 208.0
-offset_right = 193.0
-offset_bottom = 233.0
+offset_left = 106.0
+offset_top = 214.0
+offset_right = 219.0
+offset_bottom = 239.0
 theme_override_colors/font_color = Color(0.286275, 0.137255, 0.227451, 1)
 theme_override_fonts/font = ExtResource("2_t0517")
 theme_override_font_sizes/font_size = 20
 text = "Music On
 "
 
-[node name="Exit" type="Button" parent="Panel"]
+[node name="Exit" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 304.0
-offset_top = 8.0
-offset_right = 336.0
-offset_bottom = 39.0
+offset_left = 330.0
+offset_top = 14.0
+offset_right = 362.0
+offset_bottom = 45.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_j27mc")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_ewy4k")
 text = "X"
 
-[node name="yellow" type="Button" parent="Panel"]
+[node name="yellow" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 136.0
-offset_right = 80.0
-offset_bottom = 168.0
+offset_left = 74.0
+offset_top = 142.0
+offset_right = 106.0
+offset_bottom = 174.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qyanb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wn0bd")
 theme_override_styles/normal = ExtResource("4_cqh4o")
 
-[node name="purple" type="Button" parent="Panel"]
+[node name="purple" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 104.0
-offset_top = 136.0
-offset_right = 136.0
-offset_bottom = 168.0
+offset_left = 130.0
+offset_top = 142.0
+offset_right = 162.0
+offset_bottom = 174.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cos85")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w5ejj")
 theme_override_styles/normal = ExtResource("5_1nrd2")
 
-[node name="street" type="Button" parent="Panel"]
+[node name="street" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 136.0
-offset_right = 192.0
-offset_bottom = 168.0
+offset_left = 186.0
+offset_top = 142.0
+offset_right = 218.0
+offset_bottom = 174.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_u0u4o")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tc7nf")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Panel/street"]
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect/HBoxContainer/VBoxContainer/Panel/street"]
 show_behind_parent = true
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("3_rfrbt")
 
-[node name="street2" type="Button" parent="Panel"]
+[node name="street2" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 136.0
-offset_right = 248.0
-offset_bottom = 168.0
+offset_left = 242.0
+offset_top = 142.0
+offset_right = 274.0
+offset_bottom = 174.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_r31ea")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ej4ex")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tc7nf")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Panel/street2"]
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect/HBoxContainer/VBoxContainer/Panel/street2"]
 show_behind_parent = true
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("4_qnuri")
 
-[node name="space" type="Button" parent="Panel"]
+[node name="space" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 136.0
-offset_right = 304.0
-offset_bottom = 168.0
+offset_left = 298.0
+offset_top = 142.0
+offset_right = 330.0
+offset_bottom = 174.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nx224")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tc7nf")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Panel/space"]
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect/HBoxContainer/VBoxContainer/Panel/space"]
 show_behind_parent = true
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("5_babpk")
 
-[node name="CheckButton" type="CheckButton" parent="Panel"]
+[node name="CheckButton" type="CheckButton" parent="ColorRect/HBoxContainer/VBoxContainer/Panel"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 0
-offset_left = 208.0
-offset_top = 200.0
-offset_right = 252.0
-offset_bottom = 240.0
+offset_left = 234.0
+offset_top = 206.0
+offset_right = 278.0
+offset_bottom = 246.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8kfte")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_o38ij")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_yh0jk")
 button_pressed = true
 keep_pressed_outside = true
 
-[connection signal="pressed" from="Panel/Exit" to="." method="_on_x_pressed"]
-[connection signal="pressed" from="Panel/yellow" to="." method="_on_yellow_pressed"]
-[connection signal="pressed" from="Panel/purple" to="." method="_on_purple_pressed"]
-[connection signal="pressed" from="Panel/street" to="." method="_on_street_pressed"]
-[connection signal="pressed" from="Panel/street2" to="." method="_on_street_2_pressed"]
-[connection signal="pressed" from="Panel/space" to="." method="_on_space_pressed"]
-[connection signal="toggled" from="Panel/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Panel/Exit" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Panel/yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Panel/purple" to="." method="_on_purple_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Panel/street" to="." method="_on_street_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Panel/street2" to="." method="_on_street_2_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Panel/space" to="." method="_on_space_pressed"]
+[connection signal="toggled" from="ColorRect/HBoxContainer/VBoxContainer/Panel/CheckButton" to="." method="_on_check_button_toggled"]

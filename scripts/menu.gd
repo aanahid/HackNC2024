@@ -10,7 +10,7 @@ func _on_play_pressed():
 
 
 func _on_settings_pressed() -> void:
-	$settings/Settings.show()
+	$CanvasLayer/Settings.show()
 
 
 func _on_exit_pressed() -> void:

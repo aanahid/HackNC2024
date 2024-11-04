@@ -432,7 +432,7 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 	Global.toggle_music()
 
 func _on_settings_pressed() -> void:
-	$setting_icon/settings/CanvasLayer/Settings.show()
+	$CanvasLayer/Settings.show()
 	
 func _on_background_changed(new_value):
 	if Global.background == 1: 

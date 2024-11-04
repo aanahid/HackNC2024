@@ -1396,15 +1396,12 @@ offset_top = -2.0
 offset_right = 61.0
 offset_bottom = 60.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="setting_icon/settings"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Settings" parent="setting_icon/settings/CanvasLayer" instance=ExtResource("43_h5ad4")]
+[node name="Settings" parent="CanvasLayer" instance=ExtResource("43_h5ad4")]
 visible = false
 top_level = true
-offset_left = 448.0
-offset_top = 176.0
-offset_right = -808.0
-offset_bottom = -520.0
+z_index = 1
 
 [connection signal="pressed" from="Items/clothes/clothes_button" to="." method="_on_clothes_button_pressed"]
 [connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox/c1" to="." method="_on_please_pressed"]
