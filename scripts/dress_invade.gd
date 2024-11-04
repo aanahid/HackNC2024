@@ -18,6 +18,8 @@ var background4 = preload("res://assets/backgrounds/street.png")
 var background5 = preload("res://assets/backgrounds/spacebg.jpg")
 	
 func _ready():
+	Global.connect("background_changed", Callable(self, "_on_background_changed"))
+	
 	Global.currentFace = 2
 	Global.currentShoes = 1
 	Global.currentBangs = 2
@@ -43,16 +45,7 @@ func _ready():
 	elif Global.round == 3:
 		$Theme/theme1/HBoxContainer/Label.text = "Dress to your heart's desire!"
 		
-	if Global.background == 1: 
-		$background.color = Color("#ebdca1")
-	elif Global.background == 2: 
-		$background.color = Color("5d2f4a")
-	elif Global.background == 3: 
-		$imgbackground.texture = background3
-	elif Global.background == 4: 
-		$imgbackground.texture = background4
-	elif Global.background == 5: 
-		$imgbackground.texture = background5
+	_on_background_changed(Global.background)
 
 func _on_clothes_button_pressed():
 	var clothes_box = $Items/clothes.get_theme_stylebox("panel")
@@ -92,7 +85,6 @@ func _on_extra_button_pressed() -> void:
 	clothes_items.hide()
 	faces_items.hide()
 	extra_items.show()
-
 
 func _on_please_pressed() -> void:
 	print("clicked")
@@ -432,3 +424,20 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 
 func _on_settings_pressed() -> void:
 	$setting_icon/settings/CanvasLayer/Settings.show()
+	
+func _on_background_changed(new_value):
+	if Global.background == 1: 
+		$imgbackground.hide()
+		$background.color = Color("#ebdca1")
+	elif Global.background == 2: 
+		$imgbackground.hide()
+		$background.color = Color("5d2f4a")
+	elif Global.background == 3: 
+		$imgbackground.show()
+		$imgbackground.texture = background3
+	elif Global.background == 4: 
+		$imgbackground.show()
+		$imgbackground.texture = background4
+	elif Global.background == 5: 
+		$imgbackground.show()
+		$imgbackground.texture = background5

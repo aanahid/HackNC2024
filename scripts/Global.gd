@@ -14,7 +14,13 @@ extends Node
 
 @onready var round = 1
 
+signal background_changed(new_value)
 @onready var background = 2 # 5 options, 2 for purple as default
+
+func set_background_variable(new_value: int):
+	if background != new_value:
+		background = new_value
+		emit_signal("background_changed", background)
 
 var music_on = true  # This keeps track of whether music is on or off.
 @onready var music = preload("res://assets/spaceybg.mp3")  # Load your music file

@@ -1,7 +1,8 @@
-[gd_scene load_steps=46 format=3 uid="uid://ll8nkawifktc"]
+[gd_scene load_steps=47 format=3 uid="uid://ll8nkawifktc"]
 
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_n256q"]
 [ext_resource type="Script" path="res://scripts/dress_invade.gd" id="1_w6f6x"]
+[ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="2_qwdiw"]
 [ext_resource type="StyleBox" uid="uid://quyqrk008ui5" path="res://assets/styleboxflat/pink_tab.tres" id="3_brpsm"]
 [ext_resource type="Texture2D" uid="uid://cpiijo387d2js" path="res://assets/icons/hanger.png" id="4_adrk1"]
 [ext_resource type="Texture2D" uid="uid://ccc4djhce0bhv" path="res://assets/Dressup/tops/greytop.png" id="4_lwye8"]
@@ -65,12 +66,17 @@ script = ExtResource("1_w6f6x")
 z_index = -1
 offset_right = 1296.0
 offset_bottom = 736.0
-color = Color(0.921569, 0.862745, 0.631373, 1)
+color = Color(0.364706, 0.184314, 0.290196, 1)
 metadata/_edit_lock_ = true
 
 [node name="imgbackground" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+modulate = Color(0.366595, 0.366595, 0.366595, 1)
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_qwdiw")
+expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Items" type="Panel" parent="."]
 offset_left = 628.0
