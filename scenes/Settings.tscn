@@ -1,0 +1,164 @@
+[gd_scene load_steps=11 format=3 uid="uid://de4h3quj57qwm"]
+
+[ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_q2lc3"]
+[ext_resource type="Script" path="res://scenes/settings.gd" id="1_vpb32"]
+[ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="2_t0517"]
+[ext_resource type="Texture2D" uid="uid://brijfo17hro5m" path="res://assets/backgrounds/citystreet.png" id="3_rfrbt"]
+[ext_resource type="Texture2D" uid="uid://d07svgaqtpn04" path="res://assets/backgrounds/street.png" id="4_qnuri"]
+[ext_resource type="Texture2D" uid="uid://dlxtwdwdydpya" path="res://assets/backgrounds/spacebg.jpg" id="5_babpk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blh6y"]
+bg_color = Color(0.921569, 0.862745, 0.631373, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wijr5"]
+bg_color = Color(0.364706, 0.184314, 0.290196, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tc7nf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewy4k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vpb32")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 352.0
+offset_bottom = 288.0
+theme_override_styles/panel = ExtResource("1_q2lc3")
+
+[node name="Settings" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 16.0
+offset_right = 226.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_t0517")
+theme_override_font_sizes/font_size = 20
+text = "Settings
+"
+
+[node name="background color" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 72.0
+offset_right = 253.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("2_t0517")
+theme_override_font_sizes/font_size = 20
+text = "Background: "
+
+[node name="yellow" type="Button" parent="Panel/background color"]
+offset_left = -40.0
+offset_top = 40.0
+offset_right = -8.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_blh6y")
+
+[node name="purple" type="Button" parent="Panel/background color"]
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 48.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wijr5")
+
+[node name="street" type="Button" parent="Panel/background color"]
+offset_left = 72.0
+offset_top = 40.0
+offset_right = 104.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tc7nf")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Panel/background color/street"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("3_rfrbt")
+
+[node name="street2" type="Button" parent="Panel/background color"]
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tc7nf")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Panel/background color/street2"]
+show_behind_parent = true
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("4_qnuri")
+
+[node name="space" type="Button" parent="Panel/background color"]
+offset_left = 184.0
+offset_top = 40.0
+offset_right = 216.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tc7nf")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Panel/background color/space"]
+show_behind_parent = true
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("5_babpk")
+
+[node name="Music" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 176.0
+offset_right = 240.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("2_t0517")
+theme_override_font_sizes/font_size = 20
+text = "Music:
+"
+
+[node name="CheckButton" type="CheckButton" parent="Panel/Music"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 52.0
+offset_bottom = 64.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("2_t0517")
+button_pressed = true
+
+[node name="X" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 8.0
+offset_right = 336.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.905882, 0.313726, 0.513726, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ewy4k")
+text = "X"
+
+[connection signal="pressed" from="Panel/background color/yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="Panel/background color/purple" to="." method="_on_purple_pressed"]
+[connection signal="pressed" from="Panel/background color/street" to="." method="_on_street_pressed"]
+[connection signal="pressed" from="Panel/background color/street2" to="." method="_on_street_2_pressed"]
+[connection signal="pressed" from="Panel/background color/space" to="." method="_on_space_pressed"]
+[connection signal="pressed" from="Panel/X" to="." method="_on_x_pressed"]

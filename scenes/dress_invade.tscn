@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://ll8nkawifktc"]
+[gd_scene load_steps=46 format=3 uid="uid://ll8nkawifktc"]
 
 [ext_resource type="StyleBox" uid="uid://cma7qotq8yxmp" path="res://assets/styleboxflat/items_stylebox.tres" id="1_n256q"]
 [ext_resource type="Script" path="res://scripts/dress_invade.gd" id="1_w6f6x"]
@@ -42,7 +42,7 @@
 [ext_resource type="FontFile" uid="uid://ydi4j86nisvg" path="res://assets/Dressup/ZenDots-Regular.ttf" id="39_oh70p"]
 [ext_resource type="Texture2D" uid="uid://cuhvyaq71neet" path="res://assets/Dressup/extra/star.png" id="39_t1d1k"]
 [ext_resource type="Texture2D" uid="uid://pik4wjjqtntc" path="res://assets/icons/settings.png" id="43_1pvmd"]
-[ext_resource type="FontFile" uid="uid://bicbw3ivie58m" path="res://assets/ZenDots-Regular.ttf" id="44_b2vq0"]
+[ext_resource type="PackedScene" uid="uid://de4h3quj57qwm" path="res://scenes/Settings.tscn" id="43_h5ad4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eeng"]
 bg_color = Color(0.956863, 0.905882, 0.835294, 1)
@@ -58,11 +58,6 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hv08m"]
-bg_color = Color(0.576471, 0.121569, 0.294118, 0.741176)
-
-[sub_resource type="Theme" id="Theme_a2w1s"]
-
 [node name="DressInvade" type="Node2D"]
 script = ExtResource("1_w6f6x")
 
@@ -72,6 +67,10 @@ offset_right = 1296.0
 offset_bottom = 736.0
 color = Color(0.921569, 0.862745, 0.631373, 1)
 metadata/_edit_lock_ = true
+
+[node name="imgbackground" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Items" type="Panel" parent="."]
 offset_left = 628.0
@@ -107,6 +106,7 @@ offset_right = 100.0
 offset_bottom = 59.0
 
 [node name="clothes_items" type="CanvasLayer" parent="Items/clothes"]
+layer = 0
 
 [node name="clothes_control" type="Control" parent="Items/clothes/clothes_items"]
 layout_mode = 3
@@ -1343,8 +1343,8 @@ layout_mode = 2
 custom_minimum_size = Vector2(440, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("39_oh70p")
-theme_override_font_sizes/font_size = 20
-text = "You must dress to invade!"
+theme_override_font_sizes/font_size = 32
+text = "Dress to invade!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -1372,88 +1372,30 @@ theme_override_fonts/font = ExtResource("39_oh70p")
 theme_override_font_sizes/font_size = 25
 text = "Done"
 
-[node name="settings" type="TextureButton" parent="."]
+[node name="setting_icon" type="TextureRect" parent="."]
 offset_left = 22.0
-offset_top = 12.0
-offset_right = 83.0
-offset_bottom = 74.0
-
-[node name="setting_icon" type="TextureRect" parent="settings"]
-layout_mode = 0
-offset_top = 2.0
-offset_right = 58.0
-offset_bottom = 68.0
+offset_top = 14.0
+offset_right = 80.0
+offset_bottom = 80.0
 texture = ExtResource("43_1pvmd")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Panel" type="Panel" parent="settings"]
+[node name="settings" type="TextureButton" parent="setting_icon"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 61.0
+offset_bottom = 60.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="setting_icon/settings"]
+
+[node name="Settings" parent="setting_icon/settings/CanvasLayer" instance=ExtResource("43_h5ad4")]
 visible = false
-layout_mode = 0
-offset_left = -5.0
-offset_top = 85.0
-offset_right = 267.0
-offset_bottom = 374.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hv08m")
-
-[node name="background color" type="Label" parent="settings/Panel"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 256.0
-offset_bottom = 65.0
-theme_override_fonts/font = ExtResource("44_b2vq0")
-theme_override_font_sizes/font_size = 20
-text = "Background Color: "
-
-[node name="ColorRect" type="ColorRect" parent="settings/Panel/background color"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 40.0
-offset_right = 104.0
-offset_bottom = 64.0
-theme = SubResource("Theme_a2w1s")
-color = Color(0.921569, 0.862745, 0.631373, 1)
-
-[node name="yellow" type="TextureButton" parent="settings/Panel/background color/ColorRect"]
-layout_mode = 0
-offset_right = 22.0
-offset_bottom = 22.0
-
-[node name="ColorRect2" type="ColorRect" parent="settings/Panel/background color"]
-layout_mode = 0
-offset_left = 144.0
-offset_top = 40.0
-offset_right = 168.0
-offset_bottom = 64.0
-color = Color(0.364706, 0.184314, 0.290196, 1)
-
-[node name="purple" type="TextureButton" parent="settings/Panel/background color/ColorRect2"]
-layout_mode = 0
-offset_right = 22.0
-offset_bottom = 22.0
-
-[node name="Music" type="Label" parent="settings/Panel"]
-layout_mode = 0
-offset_left = 96.0
-offset_top = 144.0
-offset_right = 200.0
-offset_bottom = 169.0
-theme_override_fonts/font = ExtResource("44_b2vq0")
-theme_override_font_sizes/font_size = 20
-text = "Music:
-"
-
-[node name="CheckButton" type="CheckButton" parent="settings/Panel/Music"]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 0
-offset_left = 8.0
-offset_top = 24.0
-offset_right = 52.0
-offset_bottom = 64.0
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("44_b2vq0")
-button_pressed = true
+top_level = true
+offset_left = 448.0
+offset_top = 176.0
+offset_right = -808.0
+offset_bottom = -520.0
 
 [connection signal="pressed" from="Items/clothes/clothes_button" to="." method="_on_clothes_button_pressed"]
 [connection signal="pressed" from="Items/clothes/clothes_items/clothes_control/ScrollContainer/clothes_grid/cwhitebox/c1" to="." method="_on_please_pressed"]
@@ -1490,7 +1432,4 @@ button_pressed = true
 [connection signal="pressed" from="Items/extra/extra_items/extra_control/ScrollContainer/extra_grid/whitebox7/e7" to="." method="_on_e_7_pressed"]
 [connection signal="pressed" from="Items/extra/extra_button" to="." method="_on_extra_button_pressed"]
 [connection signal="pressed" from="Next/TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="settings/Panel/background color/ColorRect/yellow" to="." method="_on_yellow_pressed"]
-[connection signal="pressed" from="settings/Panel/background color/ColorRect2/purple" to="." method="_on_purple_pressed"]
-[connection signal="toggled" from="settings/Panel/Music/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="setting_icon/settings" to="." method="_on_settings_pressed"]

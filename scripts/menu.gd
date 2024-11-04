@@ -8,7 +8,7 @@ func _on_play_pressed():
 
 
 func _on_settings_pressed() -> void:
-	$settings/Panel.visible = !$settings/Panel.visible
+	$settings/Settings.show()
 
 
 func _on_exit_pressed() -> void:

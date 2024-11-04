@@ -14,6 +14,8 @@ extends Node
 
 @onready var round = 1
 
+@onready var background = 2 # 5 options, 2 for purple as default
+
 var music_on = true  # This keeps track of whether music is on or off.
 @onready var music = preload("res://assets/spaceybg.mp3")  # Load your music file
 
