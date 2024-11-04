@@ -111,16 +111,17 @@ func _ready():
 			await display_text(line)
 		
 	if curr_round == 3:
+		var line
 		if !isAlien():
 			var new_texture = preload("res://assets/backgrounds/street.png")
 			$"../../background".texture = new_texture
-			
+			line = dialogue_lines[4]
 		else:
 			var new_texture = preload("res://assets/backgrounds/spacebg.jpg")
 			$"../../background".texture = new_texture
 			$"../../MagazineTexture".show()
 			$"../../MagazineBG".show()
-		var line = dialogue_lines[3]
+			line = dialogue_lines[3]
 		print(line)
 		await display_text(line)
 	
