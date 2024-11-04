@@ -1,14 +1,14 @@
 extends Node
 
 var dialogue_lines = [
-		"Oh no! Your ship has malfunctioned and you find yourself stranded on Earth with nothing but fashionable attire. Try to blend in with the earthlings so you don't get caught by government agents! It might be a good idea to hide your antennas...",
+		"Oh no! Your ship has malfunctioned and you find yourself stranded. Try to blend in with the earthlings so you don't get caught by government agents! It might be a good idea to hide your antennas...",
 		"You failed to evade the government agents. For what feels like an eternity, scientists take notes on your lack of fashion. Maybe next time...",
 		"You successfully evaded the government agents with your super graphic ultra modern style that helps you avoid capture. It is up to you to decide whether you remain on earth or continue your journey through space.",
 		"You are a universal trendsetter who continues to slay everyday. The universe marvels at your stunning ensemble. Super-duper! ✨",
 		"The earthlings are starstruck by your revolutionary regalia. As a fashion ambassador for aliens, you have helped forge a peaceful alliance between species. Marvelous! 🌍"
 	]
 var curr_round = Global.round;
-@onready var dialogue_label = $HBoxContainer/Label
+@onready var dialogue_label = $Label
 
 var text_speed = 0.05  # Delay in seconds for each character
 var is_typing = false
@@ -144,21 +144,29 @@ func _input(event):
 			if Global.round == 1:
 				dialogue_label.text = dialogue_lines[0]
 			if Global.round == 2:
-				if Global.currentAntenna == null and Global.tail == 0:
-					dialogue_label.text = dialogue_lines[2]
-				else:
+				if isAlien():
 					dialogue_label.text = dialogue_lines[1]
+				else:
+					dialogue_label.text = dialogue_lines[2]
 			if Global.round == 3:
-				dialogue_label.text = dialogue_lines[3]
+				if isAlien():
+					dialogue_label.text = dialogue_lines[3]
+				else:
+					dialogue_label.text = dialogue_lines[4]
 				
 			is_typing = false
 		else:
+			if curr_round == 2 and isAlien():
+				Global.round = 1
+				get_tree().change_scene_to_file("res://scenes/menu.tscn")
+				return
 			if curr_round == 3:
 				Global.round = 1
 				get_tree().change_scene_to_file("res://scenes/menu.tscn")
 				return
 			get_tree().change_scene_to_file("res://scenes/dress_invade.tscn")
 
-#func hide_dialogue_box():
-	# Hide the dialogue box or signal the end of the conversation
-	#visible = false
+func isAlien() -> bool:
+	if Global.currentAntenna != null or Global.tail == 1 or Global.currentFace == 1 or Global.ears == 1 or Global.currentTop == 1 or Global.currentBottom == 1:
+		return true
+	return false
