@@ -2,7 +2,7 @@ extends Control
 
 func _ready() -> void:
 	if !Global.music_on:
-		$Panel/Music/CheckButton.set_pressed_no_signal(false)
+		$ColorRect/HBoxContainer/VBoxContainer/Panel/CheckButton.set_pressed_no_signal(false)
 
 func _on_x_pressed() -> void:
 	$".".hide()

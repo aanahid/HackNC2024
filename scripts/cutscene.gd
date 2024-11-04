@@ -1,9 +1,9 @@
 extends Node
 
 var dialogue_lines = [
-		"Oh no! Your ship has malfunctioned and you find yourself stranded. Try to blend in with the earthlings so you don't get caught by government agents! It might be a good idea to hide your antennas...",
-		"You failed to evade the government agents. For what feels like an eternity, scientists examine your extraterrestrial fashion. Maybe next time you won't get caught...",
-		"You successfully evaded the government agents with your super graphic ultra modern style that helps you avoid capture. It is up to you to decide whether you remain on earth or continue your journey through space.",
+		"Oh no! Your ship has malfunctioned and you find yourself stranded on Earth. Try to blend in with the earthlings so you don't get caught by government agents! It might be a good idea to hide your antennas...",
+		"You failed to evade the government agents. For what feels like an eternity, scientists examine your extra-terrestrial fashion. Maybe next time you won't get caught...",
+		"You successfully evaded the government agents with your super graphic ultra modern style. It is up to you to decide whether you remain on Earth or continue your journey through space.",
 		"You are a universal trendsetter who continues to slay everyday. The universe marvels at your stunning ensemble. Super-duper! ✨",
 		"The earthlings are starstruck by your revolutionary regalia. As a fashion ambassador for aliens, you have helped forge a peaceful alliance between species. Marvelous! 🌍"
 	]
